@@ -1,0 +1,22 @@
+<h1>Welcome to the BookMonkey!</h1>
+
+<hr />
+
+<input type="search" [formControl]="searchControl" placeholder="Search" />
+
+@if (isLoading()) {
+<span aria-busy="true">Searching ...</span>
+}
+
+@if (results().length) {
+<section>
+  <h2>Search results</h2>
+  <ul>
+    @for (b of results(); track b.isbn) {
+    <li>
+      <a [routerLink]="['/books', 'details', b.isbn]">{{ b.title }} ({{ b.isbn }})</a>
+    </li>
+    }
+  </ul>
+</section>
+}

@@ -1,0 +1,19 @@
+<section>
+  <h1>Books</h1>
+  <div>
+    @for (b of books(); track b.isbn) {
+    <article class="book-item">
+      <img [src]="b.imageUrl" alt="Cover" />
+      <header>
+        <h2>{{ b.title }}</h2>
+      </header>
+      <div>
+        @if (b.subtitle) {
+        <p role="doc-subtitle">{{ b.subtitle }}</p>
+        }
+        ISBN: {{ b.isbn }}
+      </div>
+    </article>
+    }
+  </div>
+</section>

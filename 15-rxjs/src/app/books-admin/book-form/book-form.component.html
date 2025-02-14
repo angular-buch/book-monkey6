@@ -1,0 +1,51 @@
+@let c = bookForm.controls;
+
+<form [formGroup]="bookForm" (ngSubmit)="submitForm()">
+  @let titleInvalid = isInvalid(c.title);
+  <label for="title">Title</label>
+  <input
+    id="title"
+    [formControl]="c.title"
+    [attr.aria-describedby]="titleInvalid ? 'title-error' : null"
+    [attr.aria-invalid]="titleInvalid"
+  />
+  @if (titleInvalid) {
+  <small id="title-error">A title is required.</small>
+  }
+
+  <label for="subtitle">Subtitle</label>
+  <input id="subtitle" [formControl]="c.subtitle" />
+
+  @let isbnInvalid = isInvalid(c.isbn);
+  <label for="isbn">ISBN</label>
+  <input
+    id="isbn"
+    [formControl]="c.isbn"
+    [attr.aria-describedby]="isbnInvalid ? 'isbn-error' : null"
+    [attr.aria-invalid]="isbnInvalid"
+  />
+  @if (isbnInvalid) {
+  <small id="isbn-error">The ISBN number must have between 10 and 13 characters.</small>
+  }
+
+  <fieldset>
+    <legend>Authors</legend>
+    <button type="button" (click)="addAuthorControl()">Add Author</button>
+    <div role="group">
+      @for (authorControl of c.authors.controls; track $index) {
+      <input
+        [attr.aria-label]="'Author ' + $index"
+        [formControl]="authorControl"
+      />
+      }
+    </div>
+  </fieldset>
+
+  <label for="description">Description</label>
+  <textarea id="description" [formControl]="c.description"></textarea>
+
+  <label for="thumbnailUrl">Thumbnail URL</label>
+  <input type="url" id="thumbnailUrl" [formControl]="c.imageUrl" />
+
+  <button type="submit" [disabled]="bookForm.invalid">Save</button>
+</form>

@@ -1,0 +1,8 @@
+<section>
+  <h1>Books</h1>
+  <div>
+    @for (b of books(); track b.isbn) {
+    <app-book-item [book]="b" />
+    }
+  </div>
+</section>

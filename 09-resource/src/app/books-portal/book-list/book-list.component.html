@@ -1,0 +1,33 @@
+<section>
+  <h1>Favorite Books</h1>
+  <button type="button" (click)="clearLikedBooks()">Clear</button>
+  <ul>
+    @for (b of likedBooks(); track b.isbn) {
+    <li>{{ b.title }} ({{ b.isbn }})</li>
+    } @empty {
+    <li>No books liked.</li>
+    }
+  </ul>
+</section>
+
+<section>
+  <h1>Books</h1>
+  <button type="button" (click)="books.reload()" [attr.aria-busy]="books.isLoading()">
+    Reload
+  </button>
+
+  <div>
+    <input
+      type="search"
+      #searchInput
+      (input)="this.searchTerm.set(searchInput.value)"
+      [value]="this.searchTerm()"
+      placeholder="Search"
+      aria-label="Search"
+    />
+
+    @for (b of filteredBooks(); track b.isbn) {
+    <app-book-item [book]="b" (like)="addLikedBook($event)" />
+    }
+  </div>
+</section>
