@@ -31,6 +31,14 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: ":matches(PropertyDefinition, MethodDefinition)[accessibility='private']",
+          message: "Use #private instead",
+        },
+      ],
+      "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "no-public" }]
     },
   },
   {

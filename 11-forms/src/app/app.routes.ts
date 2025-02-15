@@ -6,7 +6,7 @@ import { booksAdminRoutes } from './books-admin/books-admin.routes';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, title: 'BookMonkey' },
   ...booksPortalRoutes,
   ...booksAdminRoutes
 ];

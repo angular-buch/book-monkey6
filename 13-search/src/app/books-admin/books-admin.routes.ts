@@ -4,5 +4,5 @@ import { BookCreateComponent } from './book-create/book-create.component';
 
 export const booksAdminRoutes: Routes = [
   { path: 'admin', redirectTo: 'admin/create' },
-  { path: 'admin/create', component: BookCreateComponent }
+  { path: 'admin/create', component: BookCreateComponent, title: 'Create Book' }
 ];

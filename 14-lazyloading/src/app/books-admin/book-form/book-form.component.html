@@ -44,8 +44,8 @@
   <label for="description">Description</label>
   <textarea id="description" [formControl]="c.description"></textarea>
 
-  <label for="thumbnailUrl">Thumbnail URL</label>
-  <input type="url" id="thumbnailUrl" [formControl]="c.imageUrl" />
+  <label for="imageUrl">Thumbnail URL</label>
+  <input type="url" id="imageUrl" [formControl]="c.imageUrl" />
 
   <button type="submit" [disabled]="bookForm.invalid">Save</button>
 </form>
