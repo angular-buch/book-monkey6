@@ -3,7 +3,6 @@
   <div>
     @for (b of books(); track b.isbn) {
     <article class="book-item">
-      <img [src]="b.imageUrl" alt="Cover" />
       <header>
         <h2>{{ b.title }}</h2>
       </header>
