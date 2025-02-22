@@ -13,14 +13,14 @@ export class BookStoreService {
   #apiUrl = 'https://api6.angular-buch.com';
 
   getBookList(): Observable<Book[]> {
-    return this.#http.get<Book[]>(this.#apiUrl + '/books');
+    return this.#http.get<Book[]>(`${this.#apiUrl}/books`);
   }
 
   getOneBook(isbn: string): Observable<Book> {
-    return this.#http.get<Book>(this.#apiUrl + '/books/' + isbn);
+    return this.#http.get<Book>(`${this.#apiUrl}/books/${isbn}`);
   }
 
   deleteBook(isbn: string): Observable<unknown> {
-    return this.#http.delete(this.#apiUrl + '/books/' + isbn);
+    return this.#http.delete(`${this.#apiUrl}/books/${isbn}`);
   }
 }
