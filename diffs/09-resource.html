@@ -1604,7 +1604,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -1,5 +1,6 @@</div>
+        <div class="d2h-code-side-line">@@ -1,5 +1,5 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-del d2h-change">
@@ -1617,23 +1617,13 @@
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-del d2h-change">
       2
     </td>
-    <td class="d2h-cntx">
+    <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-prefix">-</span>
             <span class="d2h-code-line-ctn">import { HttpClient } from &#x27;@angular&#x2F;common&#x2F;http&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -1669,7 +1659,7 @@
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -8,16 +9,21 @@ import { Book } from &#x27;.&#x2F;book&#x27;;</div>
+        <div class="d2h-code-side-line">@@ -8,16 +8,20 @@ import { Book } from &#x27;.&#x2F;book&#x27;;</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -1758,7 +1748,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    return <del>this.#http.get&lt;Book[]&gt;</del>(<del>this.#apiUrl + &#x27;&#x2F;books&#x27;);</del></span>
+            <span class="d2h-code-line-ctn">    return <del>this.#http.get</del>&lt;Book[]&gt;(<del>`${this.#apiUrl}&#x2F;books`);</del></span>
         </div>
     </td>
 </tr><tr>
@@ -1828,17 +1818,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    return <del>this.#http.get&lt;Book&gt;</del>(<del>this.#apiUrl + &#x27;&#x2F;books&#x2F;&#x27; + isbn);</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    return <del>this.#http.get</del>&lt;Book&gt;(<del>`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</del></span>
         </div>
     </td>
 </tr><tr>
@@ -1912,32 +1892,22 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { inject, Injectable<ins>,</ins> <ins>Resource, Signal </ins>} from &#x27;@angular&#x2F;core&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { inject, Injectable<ins>,</ins> <ins>Signal </ins>} from &#x27;@angular&#x2F;core&#x27;;</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
       2
     </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { HttpClient } from &#x27;@angular&#x2F;common&#x2F;http&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      3
-    </td>
-    <td class="d2h-ins">
+    <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { rxResource } from &#x27;@angular&#x2F;core&#x2F;rxjs-interop&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { HttpClient<ins>,</ins> <ins>httpResource, HttpResourceRef </ins>} from &#x27;@angular&#x2F;common&#x2F;http&#x27;;</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      4
+      3
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -1947,7 +1917,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      5
+      4
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -1957,7 +1927,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      6
+      5
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -1972,7 +1942,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      9
+      8
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -1982,7 +1952,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      10
+      9
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -1992,7 +1962,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      11
+      10
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2012,7 +1982,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      12
+      11
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2022,7 +1992,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      13
+      12
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2032,12 +2002,22 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      14
+      13
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+      14
+    </td>
+    <td class="d2h-ins d2h-change">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  getBookList(): <ins>HttpResourceRef</ins>&lt;Book[]&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2047,17 +2027,17 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  getBookList(): <ins>Resource</ins>&lt;Book[]&gt; {</span>
+            <span class="d2h-code-line-ctn">    return <ins>httpResource</ins>&lt;Book[]&gt;(</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       16
     </td>
-    <td class="d2h-ins d2h-change">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return <ins>rxResource</ins>(<ins>{</ins></span>
+            <span class="d2h-code-line-ctn">      `${this.#apiUrl}&#x2F;books`,</span>
         </div>
     </td>
 </tr><tr>
@@ -2067,7 +2047,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      loader: () =&gt; this.#http.get&lt;Book[]&gt;(this.#apiUrl + &#x27;&#x2F;books&#x27;),</span>
+            <span class="d2h-code-line-ctn">      { defaultValue: [] }</span>
         </div>
     </td>
 </tr><tr>
@@ -2077,17 +2057,17 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      defaultValue: []</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
+    <td class="d2h-code-side-linenumber d2h-cntx">
       19
     </td>
-    <td class="d2h-ins">
+    <td class="d2h-cntx">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -2097,17 +2077,17 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
+    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
       21
     </td>
-    <td class="d2h-cntx">
+    <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  getOneBook(isbn: <ins>Signal&lt;</ins>string<ins>&gt;</ins>): <ins>HttpResourceRef</ins>&lt;Book<ins> | undefined</ins>&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2117,17 +2097,17 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  getOneBook(isbn: <ins>Signal&lt;</ins>string<ins>&gt;</ins>): <ins>Resource</ins>&lt;Book<ins> | undefined</ins>&gt; {</span>
+            <span class="d2h-code-line-ctn">    return <ins>httpResource</ins>&lt;Book&gt;(</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
+    <td class="d2h-code-side-linenumber d2h-ins">
       23
     </td>
-    <td class="d2h-ins d2h-change">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return <ins>rxResource</ins>(<ins>{</ins></span>
+            <span class="d2h-code-line-ctn">      () =&gt; `${this.#apiUrl}&#x2F;books&#x2F;${isbn()}`</span>
         </div>
     </td>
 </tr><tr>
@@ -2137,32 +2117,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      request: isbn,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      25
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      loader: () =&gt; this.#http.get&lt;Book&gt;(this.#apiUrl + &#x27;&#x2F;books&#x2F;&#x27; + isbn())</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      26
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      27
+      25
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2172,7 +2132,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      28
+      26
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2182,7 +2142,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      29
+      27
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">

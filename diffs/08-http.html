@@ -1858,7 +1858,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    return this.#<del>books</del>.<del>find</del>(<del>book</del> <del>=&gt;</del> <del>book.isbn</del> <del>===</del> isbn);</span>
+            <span class="d2h-code-line-ctn">    return this.#<del>books</del>.<del>find</del>(<del>book =&gt; book.</del>isbn<del> === isbn</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -2257,7 +2257,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.#<ins>http.get&lt;Book[]&gt;(this.#apiUrl + &#x27;&#x2F;</ins>books<ins>&#x27;)</ins>;</span>
+            <span class="d2h-code-line-ctn">    return this.#<ins>http.get&lt;Book[]&gt;(`${this.#apiUrl}&#x2F;</ins>books<ins>`)</ins>;</span>
         </div>
     </td>
 </tr><tr>
@@ -2297,7 +2297,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.#<ins>http</ins>.<ins>get&lt;Book&gt;</ins>(<ins>this.#apiUrl</ins> <ins>+</ins> <ins>&#x27;&#x2F;books&#x2F;&#x27;</ins> <ins>+</ins> isbn);</span>
+            <span class="d2h-code-line-ctn">    return this.#<ins>http</ins>.<ins>get&lt;Book&gt;</ins>(<ins>`${this.#apiUrl}&#x2F;books&#x2F;${</ins>isbn<ins>}`</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -2337,7 +2337,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.#http.delete(this.#apiUrl + &#x27;&#x2F;books&#x2F;&#x27; + isbn);</span>
+            <span class="d2h-code-line-ctn">    return this.#http.delete(`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</span>
         </div>
     </td>
 </tr><tr>
