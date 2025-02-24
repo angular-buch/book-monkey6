@@ -13,7 +13,10 @@ export class BookStoreService {
 
   getBookList(searchTerm: Signal<string>): HttpResourceRef<Book[]> {
     return httpResource<Book[]>(
-      () => `${this.#apiUrl}/books?search=${searchTerm()}`,
+      () => ({
+        url: `${this.#apiUrl}/books`,
+        params: { search: searchTerm() }
+      }),
       { defaultValue: [] }
     );
   }
