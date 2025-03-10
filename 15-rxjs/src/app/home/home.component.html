@@ -14,9 +14,12 @@
   <ul>
     @for (b of results(); track b.isbn) {
     <li>
-      <a [routerLink]="['/books', 'details', b.isbn]">{{ b.title }} ({{ b.isbn }})</a>
+      <a [routerLink]="['/books', 'details', b.isbn]">
+        {{ b.title }} ({{ b.isbn }})
+      </a>
     </li>
     }
   </ul>
 </section>
 }
+
