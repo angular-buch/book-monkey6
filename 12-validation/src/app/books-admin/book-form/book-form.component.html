@@ -10,7 +10,7 @@
     [attr.aria-invalid]="titleInvalid"
   />
   @if (titleInvalid) {
-  <small id="title-error">A title is required.</small>
+  <small id="title-error">The title is invalid.</small>
   }
 
   <label for="subtitle">Subtitle</label>
@@ -25,7 +25,7 @@
     [attr.aria-invalid]="isbnInvalid"
   />
   @if (isbnInvalid) {
-  <small id="isbn-error">The ISBN number must have between 10 and 13 characters.</small>
+  <small id="isbn-error">The ISBN is invalid.</small>
   }
 
   <fieldset>

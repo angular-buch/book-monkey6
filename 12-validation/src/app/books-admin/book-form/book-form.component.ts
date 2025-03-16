@@ -17,7 +17,7 @@ export class BookFormComponent {
       nonNullable: true,
       validators: [
         Validators.required,
-        Validators.minLength(10),
+        Validators.minLength(13),
         Validators.maxLength(13),
       ]
     }),
