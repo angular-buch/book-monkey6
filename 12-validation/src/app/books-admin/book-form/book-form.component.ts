@@ -10,7 +10,7 @@ import { Book } from '../../shared/book';
   styleUrl: './book-form.component.scss'
 })
 export class BookFormComponent {
-  submitBook = output<Book>();
+  readonly submitBook = output<Book>();
 
   bookForm = new FormGroup({
     isbn: new FormControl('', {
