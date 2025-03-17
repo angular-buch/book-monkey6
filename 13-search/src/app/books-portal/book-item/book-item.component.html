@@ -9,7 +9,7 @@
     @if (b.subtitle) {
     <p role="doc-subtitle">{{ b.subtitle }}</p>
     }
-    ISBN: {{ b.isbn }}
+    ISBN: {{ b.isbn | isbnFormat }}
   </div>
   <footer>
     <a [routerLink]="['details', b.isbn]">Details</a>

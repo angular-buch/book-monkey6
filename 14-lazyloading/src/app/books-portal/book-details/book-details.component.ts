@@ -3,10 +3,11 @@ import { DatePipe } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
 import { BookStoreService } from '../../shared/book-store.service';
+import { IsbnFormatPipe } from '../../shared/isbn-format.pipe';
 
 @Component({
   selector: 'app-book-details',
-  imports: [RouterLink, DatePipe],
+  imports: [RouterLink, DatePipe, IsbnFormatPipe],
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.scss'
 })
