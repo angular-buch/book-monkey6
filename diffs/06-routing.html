@@ -558,7 +558,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>import</ins> <ins>{</ins> <ins>HomeComponent</ins> <ins>}</ins> <ins>from</ins> <ins>&#x27;.&#x2F;home&#x2F;home.component&#x27;</ins>;</span>
+            <span class="d2h-code-line-ctn"><ins>import</ins> <ins>{</ins> <ins>HomePage</ins> <ins>}</ins> <ins>from</ins> <ins>&#x27;.&#x2F;home-page&#x2F;home-page&#x27;</ins>;</span>
         </div>
     </td>
 </tr><tr>
@@ -608,7 +608,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  { path: &#x27;home&#x27;, component: HomeComponent, title: &#x27;BookMonkey&#x27; },</span>
+            <span class="d2h-code-line-ctn">  { path: &#x27;home&#x27;, component: HomePage, title: &#x27;BookMonkey&#x27; },</span>
         </div>
     </td>
 </tr><tr>
@@ -687,7 +687,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">import { BookListComponent } from &#x27;.&#x2F;books-portal&#x2F;book-list&#x2F;book-list.component&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookList } from &#x27;.&#x2F;books-portal&#x2F;book-list&#x2F;book-list&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -727,7 +727,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  imports: [<del>BookListComponent</del>],</span>
+            <span class="d2h-code-line-ctn">  imports: [<del>BookList</del>],</span>
         </div>
     </td>
 </tr><tr>
@@ -881,12 +881,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-165342" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-670758" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.component.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ng.html</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1584,12 +1584,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-733750" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-261733" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.component.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ts</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1917,7 +1917,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { BookStoreService } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store.service&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookStore } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -1967,7 +1967,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-details.component.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-details.ng.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -1977,7 +1977,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-details.component.scss&#x27;</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-details.scss&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -1997,7 +1997,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class BookDetailsComponent {</span>
+            <span class="d2h-code-line-ctn">export class BookDetails {</span>
         </div>
     </td>
 </tr><tr>
@@ -2007,7 +2007,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  #service = inject(BookStoreService);</span>
+            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -2087,7 +2087,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.book.set(this.#service.getOneBook(isbn));</span>
+            <span class="d2h-code-line-ctn">      this.book.set(this.#store.getOneBook(isbn));</span>
         </div>
     </td>
 </tr><tr>
@@ -2127,12 +2127,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-304206" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-328822" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-item/book-item.component.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-item/book-item.ng.html</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -2310,12 +2310,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-425606" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-914123" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-item/book-item.component.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-item/book-item.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -2419,7 +2419,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-item.component.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-item.ng.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -2429,7 +2429,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-item.component.scss&#x27;</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-item.scss&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -2543,7 +2543,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-item.component.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-item.ng.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -2553,7 +2553,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-item.component.scss&#x27;</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-item.scss&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -2726,7 +2726,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { BookListComponent } from &#x27;.&#x2F;book-list&#x2F;book-list.component&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookList } from &#x27;.&#x2F;book-list&#x2F;book-list&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -2736,7 +2736,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { BookDetailsComponent } from &#x27;.&#x2F;book-details&#x2F;book-details.component&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookDetails } from &#x27;.&#x2F;book-details&#x2F;book-details&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -2766,7 +2766,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  { path: &#x27;books&#x27;, component: BookListComponent, title: &#x27;Books&#x27; },</span>
+            <span class="d2h-code-line-ctn">  { path: &#x27;books&#x27;, component: BookList, title: &#x27;Books&#x27; },</span>
         </div>
     </td>
 </tr><tr>
@@ -2776,7 +2776,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  { path: &#x27;books&#x2F;details&#x2F;:isbn&#x27;, component: BookDetailsComponent, title: &#x27;Book Details&#x27; },</span>
+            <span class="d2h-code-line-ctn">  { path: &#x27;books&#x2F;details&#x2F;:isbn&#x27;, component: BookDetails, title: &#x27;Book Details&#x27; },</span>
         </div>
     </td>
 </tr><tr>
@@ -2796,12 +2796,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-626892" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-229860" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/home/home.component.html</span>
+    </svg>    <span class="d2h-file-name">src/app/home-page/home-page.ng.html</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -2859,12 +2859,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-663624" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-938971" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/home/home.component.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/home-page/home-page.ts</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -3042,7 +3042,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  selector: &#x27;app-home&#x27;,</span>
+            <span class="d2h-code-line-ctn">  selector: &#x27;app-home-page&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3062,7 +3062,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;home.component.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;home-page.ng.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3072,7 +3072,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;home.component.scss&#x27;</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;home-page.scss&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -3092,7 +3092,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class HomeComponent {</span>
+            <span class="d2h-code-line-ctn">export class HomePage {</span>
         </div>
     </td>
 </tr><tr>
@@ -3122,12 +3122,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-981768" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-602399" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/shared/book-store.service.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/shared/book-store.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -3142,7 +3142,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -31,4 +31,8 @@ export class BookStoreService {</div>
+        <div class="d2h-code-side-line">@@ -31,4 +31,8 @@ export class BookStore {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">

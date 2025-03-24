@@ -355,12 +355,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-165342" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-670758" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.component.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ng.html</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -578,12 +578,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-733750" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-261733" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.component.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -647,7 +647,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BookStoreService } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store.service&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookStore } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -673,7 +673,7 @@
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -11,7 +12,24 @@ import { BookStoreService } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store.service&#x27;;</div>
+        <div class="d2h-code-side-line">@@ -11,7 +12,24 @@ import { BookStore } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store&#x27;;</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -692,7 +692,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookDetailsComponent {</span>
+            <span class="d2h-code-line-ctn">export class BookDetails {</span>
         </div>
     </td>
 </tr><tr>
@@ -702,7 +702,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  #service = inject(BookStoreService);</span>
+            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -742,7 +742,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly book = <del>computed(()</del> <del>=&gt;</del> <del>this.#service.getOneBook</del>(<del>this.isbn(</del>)<del>))</del></span>
+            <span class="d2h-code-line-ctn">  readonly book = <del>computed(()</del> <del>=&gt;</del> <del>this.#store.getOneBook</del>(<del>this.isbn(</del>)<del>))</del></span>
         </div>
     </td>
 </tr><tr>
@@ -976,7 +976,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BookStoreService } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store.service&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookStore } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book-store&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -1021,7 +1021,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookDetailsComponent {</span>
+            <span class="d2h-code-line-ctn">export class BookDetails {</span>
         </div>
     </td>
 </tr><tr>
@@ -1031,7 +1031,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  #service = inject(BookStoreService);</span>
+            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -1111,7 +1111,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.#service.getOneBook(this.isbn()).subscribe(book =&gt; {</span>
+            <span class="d2h-code-line-ctn">      this.#store.getOneBook(this.isbn()).subscribe(book =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -1191,7 +1191,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.#service.deleteBook(isbn).subscribe(() =&gt; {</span>
+            <span class="d2h-code-line-ctn">      this.#store.deleteBook(isbn).subscribe(() =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -1251,12 +1251,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-691696" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-336993" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-list/book-list.component.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-list/book-list.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1271,7 +1271,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -28,7 +28,9 @@ export class BookListComponent {</div>
+        <div class="d2h-code-side-line">@@ -28,7 +28,9 @@ export class BookList {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -1310,7 +1310,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    this<del>.books.set(this</del>.#service.getBookList()<del>);</del></span>
+            <span class="d2h-code-line-ctn">    this<del>.books.set(this</del>.#store.getBookList()<del>);</del></span>
         </div>
     </td>
 </tr><tr>
@@ -1414,7 +1414,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.#service.getBookList()<ins>.subscribe(books =&gt; {</ins></span>
+            <span class="d2h-code-line-ctn">    this.#store.getBookList()<ins>.subscribe(books =&gt; {</ins></span>
         </div>
     </td>
 </tr><tr>
@@ -1474,12 +1474,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-981768" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-602399" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/shared/book-store.service.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/shared/book-store.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1578,7 +1578,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookStoreService {</span>
+            <span class="d2h-code-line-ctn">export class BookStore {</span>
         </div>
     </td>
 </tr><tr>
@@ -2017,7 +2017,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookStoreService {</span>
+            <span class="d2h-code-line-ctn">export class BookStore {</span>
         </div>
     </td>
 </tr><tr>
