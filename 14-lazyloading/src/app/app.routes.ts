@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
+import { HomePage } from './home-page/home-page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, title: 'BookMonkey'  },
+  { path: 'home', component: HomePage, title: 'BookMonkey' },
   {
     path: 'books',
     loadChildren: () => import('./books-portal/books-portal.routes')

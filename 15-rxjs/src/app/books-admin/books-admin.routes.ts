@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { BookCreateComponent } from './book-create/book-create.component';
+import { BookCreate } from './book-create/book-create';
 
 export const booksAdminRoutes: Routes = [
   { path: '', redirectTo: 'create', pathMatch: 'full' },
-  { path: 'create', component: BookCreateComponent, title: 'Create Book' }
+  { path: 'create', component: BookCreate, title: 'Create Book' }
 ];

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { BookListComponent } from './books-portal/book-list/book-list.component';
+import { BookList } from './books-portal/book-list/book-list';
 
 @Component({
   selector: 'app-root',
-  imports: [BookListComponent],
+  imports: [BookList],
   templateUrl: './app.ng.html',
   styleUrl: './app.scss'
 })
