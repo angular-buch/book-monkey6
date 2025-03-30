@@ -13,7 +13,7 @@ export class BookStore {
 
   getBookList(): HttpResourceRef<Book[]> {
     return httpResource<Book[]>(
-      `${this.#apiUrl}/books`,
+      () => `${this.#apiUrl}/books`,
       { defaultValue: [] }
     );
   }
