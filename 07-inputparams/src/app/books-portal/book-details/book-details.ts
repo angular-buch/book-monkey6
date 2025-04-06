@@ -13,5 +13,5 @@ export class BookDetails {
   #store = inject(BookStore);
 
   readonly isbn = input.required<string>();
-  readonly book = computed(() => this.#store.getOneBook(this.isbn()))
+  readonly book = computed(() => this.#store.getOneBook(this.isbn()));
 }
