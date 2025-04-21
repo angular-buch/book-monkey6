@@ -15,7 +15,7 @@ export class BookList {
   #store = inject(BookStore);
   #router = inject(Router);
 
-  readonly search = input('');
+  readonly search = input<string>();
   readonly searchTerm = linkedSignal(() => this.search() || '');
 
   readonly books = this.#store.getBookList(this.searchTerm);
