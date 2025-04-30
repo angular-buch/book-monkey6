@@ -3002,7 +3002,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;unknown&gt; {</span>
+            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3012,7 +3012,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    return this.#http.delete(`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</span>
+            <span class="d2h-code-line-ctn">    return this.#http.delete&lt;void&gt;(`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</span>
         </div>
     </td>
 </tr><tr>
@@ -3096,7 +3096,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;unknown&gt; {</span>
+            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3106,7 +3106,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    return this.#http.delete(`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</span>
+            <span class="d2h-code-line-ctn">    return this.#http.delete&lt;void&gt;(`${this.#apiUrl}&#x2F;books&#x2F;${isbn}`);</span>
         </div>
     </td>
 </tr><tr>
