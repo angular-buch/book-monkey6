@@ -5,7 +5,7 @@ import { BookList } from './books-portal/book-list/book-list';
 @Component({
   selector: 'app-root',
   imports: [BookList],
-  templateUrl: './app.ng.html',
+  templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {}

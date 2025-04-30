@@ -9,7 +9,7 @@ import { BookStore } from '../shared/book-store';
 @Component({
   selector: 'app-home-page',
   imports: [ReactiveFormsModule, RouterLink],
-  templateUrl: './home-page.ng.html',
+  templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
 })
 export class HomePage {

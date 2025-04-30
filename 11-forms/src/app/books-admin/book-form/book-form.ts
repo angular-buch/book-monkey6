@@ -6,7 +6,7 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'app-book-form',
   imports: [ReactiveFormsModule],
-  templateUrl: './book-form.ng.html',
+  templateUrl: './book-form.html',
   styleUrl: './book-form.scss'
 })
 export class BookForm {

@@ -7,7 +7,7 @@ import { IsbnFormatPipe } from '../../shared/isbn-format.pipe';
 @Component({
   selector: 'app-book-item',
   imports: [RouterLink, IsbnFormatPipe],
-  templateUrl: './book-item.ng.html',
+  templateUrl: './book-item.html',
   styleUrl: './book-item.scss'
 })
 export class BookItem {

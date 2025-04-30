@@ -7,7 +7,7 @@ import { BookStore } from '../../shared/book-store';
 @Component({
   selector: 'app-book-details',
   imports: [RouterLink],
-  templateUrl: './book-details.ng.html',
+  templateUrl: './book-details.html',
   styleUrl: './book-details.scss'
 })
 export class BookDetails {

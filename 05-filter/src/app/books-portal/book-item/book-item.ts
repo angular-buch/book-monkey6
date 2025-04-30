@@ -5,7 +5,7 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'app-book-item',
   imports: [],
-  templateUrl: './book-item.ng.html',
+  templateUrl: './book-item.html',
   styleUrl: './book-item.scss'
 })
 export class BookItem {

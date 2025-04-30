@@ -8,7 +8,7 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'app-book-create',
   imports: [BookForm],
-  templateUrl: './book-create.ng.html',
+  templateUrl: './book-create.html',
   styleUrl: './book-create.scss'
 })
 export class BookCreate {

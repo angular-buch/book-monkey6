@@ -6,7 +6,7 @@ import { BookItem } from '../book-item/book-item';
 @Component({
   selector: 'app-book-list',
   imports: [BookItem],
-  templateUrl: './book-list.ng.html',
+  templateUrl: './book-list.html',
   styleUrl: './book-list.scss',
 })
 export class BookList {
