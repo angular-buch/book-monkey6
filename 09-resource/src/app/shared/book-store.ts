@@ -24,7 +24,7 @@ export class BookStore {
     );
   }
 
-  deleteBook(isbn: string): Observable<unknown> {
-    return this.#http.delete(`${this.#apiUrl}/books/${isbn}`);
+  deleteBook(isbn: string): Observable<void> {
+    return this.#http.delete<void>(`${this.#apiUrl}/books/${isbn}`);
   }
 }

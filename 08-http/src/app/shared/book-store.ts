@@ -8,7 +8,6 @@ import { Book } from './book';
   providedIn: 'root'
 })
 export class BookStore {
-
   #http = inject(HttpClient);
   #apiUrl = 'https://api6.angular-buch.com';
 
@@ -20,7 +19,7 @@ export class BookStore {
     return this.#http.get<Book>(`${this.#apiUrl}/books/${isbn}`);
   }
 
-  deleteBook(isbn: string): Observable<unknown> {
-    return this.#http.delete(`${this.#apiUrl}/books/${isbn}`);
+  deleteBook(isbn: string): Observable<void> {
+    return this.#http.delete<void>(`${this.#apiUrl}/books/${isbn}`);
   }
 }
