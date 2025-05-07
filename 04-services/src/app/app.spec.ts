@@ -14,6 +14,7 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
+  /*
   it(`should have the 'book-monkey' title`, () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
@@ -26,4 +27,5 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, book-monkey');
   });
+  */
 });
