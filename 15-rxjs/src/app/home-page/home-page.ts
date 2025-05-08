@@ -13,7 +13,7 @@ import { BookStore } from '../shared/book-store';
   styleUrl: './home-page.scss'
 })
 export class HomePage {
-  #store = inject(BookStore);
+  #bookStore = inject(BookStore);
 
   searchControl = new FormControl('', { nonNullable: true });
   readonly isLoading = signal(false);
@@ -24,7 +24,7 @@ export class HomePage {
       debounceTime(500),
       distinctUntilChanged(),
       tap(() => this.isLoading.set(true)),
-      switchMap(term => this.#store.searchBooks(term)),
+      switchMap(term => this.#bookStore.search(term)),
       tap(() => this.isLoading.set(false)),
     ),
     { initialValue: [] }

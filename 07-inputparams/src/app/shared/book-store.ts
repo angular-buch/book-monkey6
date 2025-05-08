@@ -28,11 +28,11 @@ export class BookStore {
     }
   ];
 
-  getBookList(): Book[] {
+  getAll(): Book[] {
     return this.#books;
   }
 
-  getOneBook(isbn: string): Book | undefined {
+  getSingle(isbn: string): Book | undefined {
     return this.#books.find(book => book.isbn === isbn);
   }
 }

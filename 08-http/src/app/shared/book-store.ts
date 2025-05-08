@@ -11,15 +11,15 @@ export class BookStore {
   #http = inject(HttpClient);
   #apiUrl = 'https://api6.angular-buch.com';
 
-  getBookList(): Observable<Book[]> {
+  getAll(): Observable<Book[]> {
     return this.#http.get<Book[]>(`${this.#apiUrl}/books`);
   }
 
-  getOneBook(isbn: string): Observable<Book> {
+  getSingle(isbn: string): Observable<Book> {
     return this.#http.get<Book>(`${this.#apiUrl}/books/${isbn}`);
   }
 
-  deleteBook(isbn: string): Observable<void> {
+  remove(isbn: string): Observable<void> {
     return this.#http.delete<void>(`${this.#apiUrl}/books/${isbn}`);
   }
 }

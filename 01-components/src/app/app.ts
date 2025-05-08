@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { BookList } from './books-portal/book-list/book-list';
+import { BooksOverviewPage } from './books-portal/books-overview-page/books-overview-page';
 
 @Component({
   selector: 'app-root',
-  imports: [BookList],
+  imports: [BooksOverviewPage],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

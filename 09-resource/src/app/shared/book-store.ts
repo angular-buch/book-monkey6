@@ -11,20 +11,20 @@ export class BookStore {
   #http = inject(HttpClient);
   #apiUrl = 'https://api6.angular-buch.com';
 
-  getBookList(): HttpResourceRef<Book[]> {
+  getAll(): HttpResourceRef<Book[]> {
     return httpResource<Book[]>(
       () => `${this.#apiUrl}/books`,
       { defaultValue: [] }
     );
   }
 
-  getOneBook(isbn: Signal<string>): HttpResourceRef<Book | undefined> {
+  getSingle(isbn: Signal<string>): HttpResourceRef<Book | undefined> {
     return httpResource<Book>(
       () => `${this.#apiUrl}/books/${isbn()}`
     );
   }
 
-  deleteBook(isbn: string): Observable<void> {
+  remove(isbn: string): Observable<void> {
     return this.#http.delete<void>(`${this.#apiUrl}/books/${isbn}`);
   }
 }

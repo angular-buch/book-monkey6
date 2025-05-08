@@ -1,0 +1,18 @@
+@let b = book();
+
+<article class="book-card">
+  <img [src]="b.imageUrl" alt="Cover" />
+  <header>
+    <h2>{{ b.title }}</h2>
+  </header>
+  <div>
+    @if (b.subtitle) {
+    <p role="doc-subtitle">{{ b.subtitle }}</p>
+    }
+    ISBN: {{ b.isbn | isbnFormat }}
+  </div>
+  <footer>
+    <a [routerLink]="['details', b.isbn]">Details</a>
+    <button type="button" class="secondary" (click)="likeBook()">Like</button>
+  </footer>
+</article>

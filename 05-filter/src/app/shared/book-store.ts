@@ -28,7 +28,7 @@ export class BookStore {
     }
   ];
 
-  getBookList(): Book[] {
+  getAll(): Book[] {
     return this.#books;
   }
 }

@@ -1,0 +1,17 @@
+import { Component, computed, inject, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { BookStore } from '../../shared/book-store';
+
+@Component({
+  selector: 'app-book-details-page',
+  imports: [RouterLink],
+  templateUrl: './book-details-page.html',
+  styleUrl: './book-details-page.scss'
+})
+export class BookDetailsPage {
+  #bookStore = inject(BookStore);
+
+  readonly isbn = input.required<string>();
+  readonly book = computed(() => this.#bookStore.getSingle(this.isbn()));
+}

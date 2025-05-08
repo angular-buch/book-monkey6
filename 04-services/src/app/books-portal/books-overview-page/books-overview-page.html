@@ -1,0 +1,20 @@
+<section>
+  <h1>Favorite Books</h1>
+  <button type="button" (click)="clearLikedBooks()">Clear</button>
+  <ul>
+    @for (b of likedBooks(); track b.isbn) {
+    <li>{{ b.title }} ({{ b.isbn }})</li>
+    } @empty {
+    <li>No books liked.</li>
+    }
+  </ul>
+</section>
+
+<section>
+  <h1>Books</h1>
+  <div>
+    @for (b of books(); track b.isbn) {
+    <app-book-card [book]="b" (like)="addLikedBook($event)" />
+    }
+  </div>
+</section>
