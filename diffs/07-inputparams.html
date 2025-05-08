@@ -325,12 +325,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-261733" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-676569" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details-page/book-details-page.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -439,7 +439,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookDetails {</span>
+            <span class="d2h-code-line-ctn">export class BookDetailsPage {</span>
         </div>
     </td>
 </tr><tr>
@@ -449,7 +449,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
+            <span class="d2h-code-line-ctn">  #bookStore = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -529,7 +529,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">      this.book.set(this.#store.getOneBook(isbn));</span>
+            <span class="d2h-code-line-ctn">      this.book.set(this.#bookStore.getSingle(isbn));</span>
         </div>
     </td>
 </tr><tr>
@@ -668,7 +668,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">export class BookDetails {</span>
+            <span class="d2h-code-line-ctn">export class BookDetailsPage {</span>
         </div>
     </td>
 </tr><tr>
@@ -678,7 +678,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
+            <span class="d2h-code-line-ctn">  #bookStore = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -718,7 +718,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>  readonly book = computed(() =&gt; this.#store.getOneBook(this.isbn()));</ins></span>
+            <span class="d2h-code-line-ctn"><ins>  readonly book = computed(() =&gt; this.#bookStore.getSingle(this.isbn()));</ins></span>
         </div>
     </td>
 </tr><tr>

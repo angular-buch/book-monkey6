@@ -52,12 +52,12 @@
 
     <div id="diff" style="margin-top: 1em">
       <div class="d2h-wrapper d2h-auto-color-scheme">
-    <div id="d2h-010031" class="d2h-file-wrapper" data-lang="html">
+    <div id="d2h-646547" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details-page/book-details-page.html</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -256,7 +256,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;deleteBook(b.isbn)&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;removeBook(b.isbn)&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -475,7 +475,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;deleteBook(b.isbn)&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;removeBook(b.isbn)&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -505,12 +505,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-261733" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-676569" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details/book-details.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/book-details-page/book-details-page.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -600,7 +600,7 @@
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -15,15 +14,7 @@ export class BookDetails {</div>
+        <div class="d2h-code-side-line">@@ -15,15 +14,7 @@ export class BookDetailsPage {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -679,7 +679,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">      this.#store.getOneBook(this.isbn()).subscribe(book =&gt; {</span>
+            <span class="d2h-code-line-ctn">      this.#bookStore.getSingle(this.isbn()).subscribe(book =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -739,7 +739,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string) {</span>
+            <span class="d2h-code-line-ctn">  removeBook(isbn: string) {</span>
         </div>
     </td>
 </tr><tr>
@@ -878,7 +878,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly book = <ins>this.#store.getOneBook</ins>(<ins>this.isbn</ins>);</span>
+            <span class="d2h-code-line-ctn">  readonly book = <ins>this.#bookStore.getSingle</ins>(<ins>this.isbn</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -978,7 +978,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string) {</span>
+            <span class="d2h-code-line-ctn">  removeBook(isbn: string) {</span>
         </div>
     </td>
 </tr><tr>
@@ -998,12 +998,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-718795" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-891727" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-list/book-list.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/books-overview-page/books-overview-page.html</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1241,12 +1241,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-336993" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-387235" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-list/book-list.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-portal/books-overview-page/books-overview-page.ts</span>
     <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -1261,7 +1261,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -15,24 +15,18 @@ export class BookList {</div>
+        <div class="d2h-code-side-line">@@ -15,24 +15,18 @@ export class BooksOverviewPage {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -1430,7 +1430,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    this.#store.getBookList().subscribe(books =&gt; {</span>
+            <span class="d2h-code-line-ctn">    this.#bookStore.getAll().subscribe(books =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -1554,7 +1554,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly books = <ins>this.#store.getBookList</ins>();</span>
+            <span class="d2h-code-line-ctn">  readonly books = <ins>this.#bookStore.getAll</ins>();</span>
         </div>
     </td>
 </tr><tr>
@@ -1878,7 +1878,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  getBookList(): <del>Observable</del>&lt;Book[]&gt; {</span>
+            <span class="d2h-code-line-ctn">  getAll(): <del>Observable</del>&lt;Book[]&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -1948,7 +1948,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  getOneBook(isbn: string): <del>Observable</del>&lt;Book&gt; {</span>
+            <span class="d2h-code-line-ctn">  getSingle(isbn: string): <del>Observable</del>&lt;Book&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2008,7 +2008,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
+            <span class="d2h-code-line-ctn">  remove(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr>
@@ -2117,7 +2117,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  getBookList(): <ins>HttpResourceRef</ins>&lt;Book[]&gt; {</span>
+            <span class="d2h-code-line-ctn">  getAll(): <ins>HttpResourceRef</ins>&lt;Book[]&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2187,7 +2187,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  getOneBook(isbn: <ins>Signal&lt;</ins>string<ins>&gt;</ins>): <ins>HttpResourceRef</ins>&lt;Book<ins> | undefined</ins>&gt; {</span>
+            <span class="d2h-code-line-ctn">  getSingle(isbn: <ins>Signal&lt;</ins>string<ins>&gt;</ins>): <ins>HttpResourceRef</ins>&lt;Book<ins> | undefined</ins>&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2247,7 +2247,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
+            <span class="d2h-code-line-ctn">  remove(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr>

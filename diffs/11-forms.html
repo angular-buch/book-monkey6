@@ -558,12 +558,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-956932" class="d2h-file-wrapper" data-lang="html">
+<div id="d2h-827398" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-admin/book-create/book-create.html</span>
+    </svg>    <span class="d2h-file-name">src/app/books-admin/book-create-page/book-create-page.html</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -631,7 +631,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&lt;app-book-form (submitBook)=&quot;create($event)&quot; &#x2F;&gt;</span>
+            <span class="d2h-code-line-ctn">&lt;app-book-form (submitBook)=&quot;createBook($event)&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr>
@@ -641,12 +641,12 @@
         </div>
     </div>
 </div>
-<div id="d2h-531304" class="d2h-file-wrapper" data-lang="ts">
+<div id="d2h-232090" class="d2h-file-wrapper" data-lang="ts">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
         <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-admin/book-create/book-create.ts</span>
+    </svg>    <span class="d2h-file-name">src/app/books-admin/book-create-page/book-create-page.ts</span>
     <span class="d2h-tag d2h-added d2h-added-tag">ADDED</span></span>
 <label class="d2h-file-collapse">
     <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
@@ -994,7 +994,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  selector: &#x27;app-book-create&#x27;,</span>
+            <span class="d2h-code-line-ctn">  selector: &#x27;app-book-create-page&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -1014,7 +1014,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-create.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-create-page.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -1024,7 +1024,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-create.scss&#x27;</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-create-page.scss&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -1044,7 +1044,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class BookCreate {</span>
+            <span class="d2h-code-line-ctn">export class BookCreatePage {</span>
         </div>
     </td>
 </tr><tr>
@@ -1054,7 +1054,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  #store = inject(BookStore);</span>
+            <span class="d2h-code-line-ctn">  #bookStore = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -1084,7 +1084,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  create(book: Book) {</span>
+            <span class="d2h-code-line-ctn">  createBook(book: Book) {</span>
         </div>
     </td>
 </tr><tr>
@@ -1094,7 +1094,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.#store.createBook(book).subscribe(createdBook =&gt; {</span>
+            <span class="d2h-code-line-ctn">    this.#bookStore.create(book).subscribe(createdBook =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2913,7 +2913,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { BookCreate } from &#x27;.&#x2F;book-create&#x2F;book-create&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { BookCreatePage } from &#x27;.&#x2F;book-create-page&#x2F;book-create-page&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -2953,7 +2953,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  { path: &#x27;admin&#x2F;create&#x27;, component: BookCreate, title: &#x27;Create Book&#x27; }</span>
+            <span class="d2h-code-line-ctn">  { path: &#x27;admin&#x2F;create&#x27;, component: BookCreatePage, title: &#x27;Create Book&#x27; }</span>
         </div>
     </td>
 </tr><tr>
@@ -3002,7 +3002,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
+            <span class="d2h-code-line-ctn">  remove(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3096,7 +3096,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  deleteBook(isbn: string): Observable&lt;void&gt; {</span>
+            <span class="d2h-code-line-ctn">  remove(isbn: string): Observable&lt;void&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3136,7 +3136,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  createBook(book: Book): Observable&lt;Book&gt; {</span>
+            <span class="d2h-code-line-ctn">  create(book: Book): Observable&lt;Book&gt; {</span>
         </div>
     </td>
 </tr><tr>
