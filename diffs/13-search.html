@@ -469,7 +469,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly <del>searchTerm</del> = <del>signal</del>(<del>&#x27;&#x27;</del>);</span>
+            <span class="d2h-code-line-ctn">  <del>protected</del> <del>searchTerm</del> = <del>signal</del>(<del>&#x27;&#x27;</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -499,7 +499,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly books = this.#bookStore.getAll();</span>
+            <span class="d2h-code-line-ctn">  protected books = this.#bookStore.getAll();</span>
         </div>
     </td>
 </tr><tr>
@@ -509,7 +509,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly likedBooks = signal&lt;Book[]&gt;([]);</span>
+            <span class="d2h-code-line-ctn">  protected likedBooks = signal&lt;Book[]&gt;([]);</span>
         </div>
     </td>
 </tr><tr>
@@ -529,7 +529,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  <del>readonly filteredBooks = computed</del>(<del>(</del>) <del>=&gt; </del>{</span>
+            <span class="d2h-code-line-ctn">  <del>protected filteredBooks = computed</del>(<del>(</del>) <del>=&gt; </del>{</span>
         </div>
     </td>
 </tr><tr>
@@ -768,7 +768,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly <ins>search</ins> = <ins>input&lt;string&gt;</ins>();</span>
+            <span class="d2h-code-line-ctn">  <ins>readonly</ins> <ins>search</ins> = <ins>input&lt;string&gt;</ins>();</span>
         </div>
     </td>
 </tr><tr>
@@ -778,7 +778,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly searchTerm = linkedSignal(() =&gt; this.search() || &#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">  protected searchTerm = linkedSignal(() =&gt; this.search() || &#x27;&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -798,7 +798,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly books = this.#bookStore.getAll(<ins>this.searchTerm</ins>);</span>
+            <span class="d2h-code-line-ctn">  protected books = this.#bookStore.getAll(<ins>this.searchTerm</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -808,7 +808,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly likedBooks = signal&lt;Book[]&gt;([]);</span>
+            <span class="d2h-code-line-ctn">  protected likedBooks = signal&lt;Book[]&gt;([]);</span>
         </div>
     </td>
 </tr><tr>

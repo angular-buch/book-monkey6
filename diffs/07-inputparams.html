@@ -479,7 +479,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly <del>book</del> = <del>signal</del>&lt;<del>Book | undefined</del>&gt;(<del>undefined</del>);</span>
+            <span class="d2h-code-line-ctn">  <del>protected</del> <del>book</del> = <del>signal</del>&lt;<del>Book | undefined</del>&gt;(<del>undefined</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -708,7 +708,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly <ins>isbn</ins> = <ins>input.required</ins>&lt;<ins>string</ins>&gt;();</span>
+            <span class="d2h-code-line-ctn">  <ins>readonly</ins> <ins>isbn</ins> = <ins>input.required</ins>&lt;<ins>string</ins>&gt;();</span>
         </div>
     </td>
 </tr><tr>
@@ -718,7 +718,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>  readonly book = computed(() =&gt; this.#bookStore.getSingle(this.isbn()));</ins></span>
+            <span class="d2h-code-line-ctn"><ins>  protected book = computed(() =&gt; this.#bookStore.getSingle(this.isbn()));</ins></span>
         </div>
     </td>
 </tr><tr>

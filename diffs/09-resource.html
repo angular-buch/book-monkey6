@@ -639,7 +639,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly book = <del>signal&lt;Book | undefined&gt;</del>(<del>undefined</del>);</span>
+            <span class="d2h-code-line-ctn">  protected book = <del>signal&lt;Book | undefined&gt;</del>(<del>undefined</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -878,7 +878,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly book = <ins>this.#bookStore.getSingle</ins>(<ins>this.isbn</ins>);</span>
+            <span class="d2h-code-line-ctn">  protected book = <ins>this.#bookStore.getSingle</ins>(<ins>this.isbn</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -1280,7 +1280,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly searchTerm = signal(&#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">  protected searchTerm = signal(&#x27;&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -1300,7 +1300,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  readonly books = <del>signal&lt;Book[]&gt;</del>(<del>[]</del>);</span>
+            <span class="d2h-code-line-ctn">  protected books = <del>signal&lt;Book[]&gt;</del>(<del>[]</del>);</span>
         </div>
     </td>
 </tr><tr>
@@ -1310,7 +1310,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly likedBooks = signal&lt;Book[]&gt;([]);</span>
+            <span class="d2h-code-line-ctn">  protected likedBooks = signal&lt;Book[]&gt;([]);</span>
         </div>
     </td>
 </tr><tr>
@@ -1330,7 +1330,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly filteredBooks = computed(() =&gt; {</span>
+            <span class="d2h-code-line-ctn">  protected filteredBooks = computed(() =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -1534,7 +1534,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly searchTerm = signal(&#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">  protected searchTerm = signal(&#x27;&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -1554,7 +1554,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly books = <ins>this.#bookStore.getAll</ins>();</span>
+            <span class="d2h-code-line-ctn">  protected books = <ins>this.#bookStore.getAll</ins>();</span>
         </div>
     </td>
 </tr><tr>
@@ -1564,7 +1564,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly likedBooks = signal&lt;Book[]&gt;([]);</span>
+            <span class="d2h-code-line-ctn">  protected likedBooks = signal&lt;Book[]&gt;([]);</span>
         </div>
     </td>
 </tr><tr>
@@ -1584,7 +1584,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  readonly filteredBooks = computed(() =&gt; {</span>
+            <span class="d2h-code-line-ctn">  protected filteredBooks = computed(() =&gt; {</span>
         </div>
     </td>
 </tr><tr>
