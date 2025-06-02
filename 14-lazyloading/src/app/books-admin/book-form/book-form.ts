@@ -12,7 +12,7 @@ import { Book } from '../../shared/book';
 export class BookForm {
   readonly submitBook = output<Book>();
 
-  bookForm = new FormGroup({
+  protected bookForm = new FormGroup({
     isbn: new FormControl('', {
       nonNullable: true,
       validators: [

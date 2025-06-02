@@ -13,12 +13,12 @@ import { BookStore } from '../../shared/book-store';
 export class BooksOverviewPage {
   #bookStore = inject(BookStore);
 
-  readonly searchTerm = signal('');
+  protected searchTerm = signal('');
 
-  readonly books = signal<Book[]>([]);
-  readonly likedBooks = signal<Book[]>([]);
+  protected books = signal<Book[]>([]);
+  protected likedBooks = signal<Book[]>([]);
 
-  readonly filteredBooks = computed(() => {
+  protected filteredBooks = computed(() => {
     if (!this.searchTerm()) {
       return this.books();
     }

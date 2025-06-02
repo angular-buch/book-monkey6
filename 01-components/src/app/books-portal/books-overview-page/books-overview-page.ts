@@ -9,7 +9,7 @@ import { Book } from '../../shared/book';
   styleUrl: './books-overview-page.scss',
 })
 export class BooksOverviewPage {
-  readonly books = signal<Book[]>([]);
+  protected books = signal<Book[]>([]);
 
   constructor() {
     this.books.set([

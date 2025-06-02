@@ -15,7 +15,7 @@ export class BookDetailsPage {
   #router = inject(Router);
 
   readonly isbn = input.required<string>();
-  readonly book = signal<Book | undefined>(undefined);
+  protected book = signal<Book | undefined>(undefined);
 
   constructor() {
     effect(() => {

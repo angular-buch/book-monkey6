@@ -16,7 +16,7 @@ export class BookDetailsPage {
   #router = inject(Router);
 
   readonly isbn = input.required<string>();
-  readonly book = this.#bookStore.getSingle(this.isbn);
+  protected book = this.#bookStore.getSingle(this.isbn);
 
   removeBook(isbn: string) {
     if (window.confirm('Delete book?')) {

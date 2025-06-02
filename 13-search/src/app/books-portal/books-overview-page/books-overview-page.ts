@@ -16,10 +16,10 @@ export class BooksOverviewPage {
   #router = inject(Router);
 
   readonly search = input<string>();
-  readonly searchTerm = linkedSignal(() => this.search() || '');
+  protected searchTerm = linkedSignal(() => this.search() || '');
 
-  readonly books = this.#bookStore.getAll(this.searchTerm);
-  readonly likedBooks = signal<Book[]>([]);
+  protected books = this.#bookStore.getAll(this.searchTerm);
+  protected likedBooks = signal<Book[]>([]);
 
   constructor() {
     effect(() => {

@@ -14,7 +14,7 @@ export class BookDetailsPage {
   #bookStore = inject(BookStore);
   #route = inject(ActivatedRoute);
 
-  readonly book = signal<Book | undefined>(undefined);
+  protected book = signal<Book | undefined>(undefined);
 
   constructor() {
     const isbn = this.#route.snapshot.paramMap.get('isbn');

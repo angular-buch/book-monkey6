@@ -10,7 +10,7 @@ import { BookCard } from '../book-card/book-card';
   styleUrl: './books-overview-page.scss',
 })
 export class BooksOverviewPage {
-  readonly books = signal<Book[]>([]);
+  protected books = signal<Book[]>([]);
 
   constructor() {
     this.books.set([

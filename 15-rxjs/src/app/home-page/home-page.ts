@@ -15,10 +15,10 @@ import { BookStore } from '../shared/book-store';
 export class HomePage {
   #bookStore = inject(BookStore);
 
-  searchControl = new FormControl('', { nonNullable: true });
-  readonly isLoading = signal(false);
+  protected searchControl = new FormControl('', { nonNullable: true });
+  protected isLoading = signal(false);
 
-  readonly results = toSignal(
+  protected results = toSignal(
     this.searchControl.valueChanges.pipe(
       filter(term => term.length >= 3),
       debounceTime(500),

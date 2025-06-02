@@ -13,8 +13,8 @@ import { BookStore } from '../../shared/book-store';
 export class BooksOverviewPage {
   #bookStore = inject(BookStore);
 
-  readonly books = signal<Book[]>([]);
-  readonly likedBooks = signal<Book[]>([]);
+  protected books = signal<Book[]>([]);
+  protected likedBooks = signal<Book[]>([]);
 
   constructor() {
     this.books.set(this.#bookStore.getAll());
