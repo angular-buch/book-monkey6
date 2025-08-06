@@ -2,13 +2,13 @@
 
 <form [formGroup]="bookForm" (ngSubmit)="submitForm()">
   <label for="title">Title</label>
-  <input id="title" [formControl]="c.title" />
+  <input type="text" id="title" [formControl]="c.title" />
 
   <label for="subtitle">Subtitle</label>
-  <input id="subtitle" [formControl]="c.subtitle" />
+  <input type="text" id="subtitle" [formControl]="c.subtitle" />
 
   <label for="isbn">ISBN</label>
-  <input id="isbn" [formControl]="c.isbn" />
+  <input type="text" id="isbn" [formControl]="c.isbn" />
 
   <fieldset>
     <legend>Authors</legend>
@@ -16,7 +16,8 @@
     <div role="group">
       @for (authorControl of c.authors.controls; track $index) {
       <input
-        [attr.aria-label]="'Author ' + $index"
+        type="text"
+        [attr.aria-label]="'Author ' + $index + 1"
         [formControl]="authorControl"
       />
       }

@@ -4,6 +4,7 @@
   @let titleInvalid = isInvalid(c.title);
   <label for="title">Title</label>
   <input
+    type="text"
     id="title"
     [formControl]="c.title"
     [attr.aria-describedby]="titleInvalid ? 'title-error' : null"
@@ -14,11 +15,12 @@
   }
 
   <label for="subtitle">Subtitle</label>
-  <input id="subtitle" [formControl]="c.subtitle" />
+  <input type="text" id="subtitle" [formControl]="c.subtitle" />
 
   @let isbnInvalid = isInvalid(c.isbn);
   <label for="isbn">ISBN</label>
   <input
+    type="text"
     id="isbn"
     [formControl]="c.isbn"
     [attr.aria-describedby]="isbnInvalid ? 'isbn-error' : null"
@@ -34,7 +36,8 @@
     <div role="group">
       @for (authorControl of c.authors.controls; track $index) {
       <input
-        [attr.aria-label]="'Author ' + $index"
+        type="text"
+        [attr.aria-label]="'Author ' + $index + 1"
         [formControl]="authorControl"
       />
       }
