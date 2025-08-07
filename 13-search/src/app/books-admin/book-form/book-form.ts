@@ -25,9 +25,7 @@ export class BookForm {
       nonNullable: true,
       validators: Validators.required,
     }),
-    subtitle: new FormControl('', {
-      nonNullable: true
-    }),
+    subtitle: new FormControl('', { nonNullable: true }),
     description: new FormControl('', { nonNullable: true }),
     authors: new FormArray([
       new FormControl('', { nonNullable: true })
