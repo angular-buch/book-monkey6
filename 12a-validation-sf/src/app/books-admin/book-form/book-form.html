@@ -1,0 +1,82 @@
+<form (submit)="submitForm($event)">
+  @let titleInvalid = isInvalid(f.title());
+  <label for="title">Title</label>
+  <input
+    type="text"
+    id="title"
+    [control]="f.title"
+    [attr.aria-describedby]="titleInvalid ? 'title-error' : null"
+    [attr.aria-invalid]="titleInvalid"
+  />
+  @if (titleInvalid) {
+  <small id="title-error">The title is invalid.</small>
+  }
+
+  <label for="subtitle">Subtitle</label>
+  <input type="text" id="subtitle" [control]="f.subtitle!" />
+
+  @let isbnInvalid = isInvalid(f.isbn());
+  <label for="isbn">ISBN</label>
+  <input
+    type="text"
+    id="isbn"
+    [control]="f.isbn"
+    [attr.aria-describedby]="isbnInvalid ? 'isbn-error' : null"
+    [attr.aria-invalid]="isbnInvalid"
+  />
+  @if (isbnInvalid) {
+  <small id="isbn-error">The ISBN is invalid.</small>
+  }
+
+  <fieldset>
+    <legend>Authors</legend>
+    <button type="button" (click)="addAuthorControl()">Add Author</button>
+    @let authorsInvalid = isInvalid(f.authors());
+    <div role="group">
+      @for (authorControl of f.authors; track $index) {
+      <input
+        type="text"
+        [attr.aria-label]="'Author ' + $index + 1"
+        [control]="authorControl"
+        [attr.aria-describedby]="authorsInvalid ? 'authors-error' : null"
+        [attr.aria-invalid]="authorsInvalid"
+      />
+      }
+      @if (authorsInvalid) {
+        <small id="authors-error">At least one author must be added.</small>
+      }
+    </div>
+
+  </fieldset>
+
+  @let descriptionInvalid = isInvalid(f.description());
+  <label for="description">Description</label>
+  <input
+    id="description"
+    [control]="f.description"
+    [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
+    [attr.aria-invalid]="descriptionInvalid" />
+  <!-- <textarea
+    id="description"
+    [control]="f.description"
+    [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
+    [attr.aria-invalid]="descriptionInvalid">
+  </textarea> -->
+  @if (descriptionInvalid) {
+  <small id="description-error">The description is invalid.</small>
+  }
+
+  @let imageUrlInvalid = isInvalid(f.imageUrl());
+  <label for="imageUrl">Thumbnail URL</label>
+  <input
+    type="url"
+    id="imageUrl"
+    [control]="f.imageUrl"
+    [attr.aria-describedby]="imageUrlInvalid ? 'description-error' : null"
+    [attr.aria-invalid]="imageUrlInvalid" />
+  @if (imageUrlInvalid) {
+  <small id="image-url-error">The URL is invalid.</small>
+  }
+
+  <button type="submit" [disabled]="f().invalid()" [attr.aria-busy]="f().submitting()" >Save</button>
+</form>

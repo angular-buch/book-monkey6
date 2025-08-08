@@ -4,11 +4,10 @@
 }
 
 @if (book.isLoading()) {
-<p aria-busy="true">Loading ...</p>
+<p aria-busy="true">Loading...</p>
 }
 
-@if (book.hasValue()) {
-@let b = book.value();
+@if (book.value(); as b) {
 <article>
   <header>
     <h1>{{ b.title }}</h1>
