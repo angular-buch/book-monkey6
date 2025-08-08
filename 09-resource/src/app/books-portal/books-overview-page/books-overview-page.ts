@@ -19,6 +19,10 @@ export class BooksOverviewPage {
   protected likedBooks = signal<Book[]>([]);
 
   protected filteredBooks = computed(() => {
+    if (!this.books.hasValue()) {
+      return [];
+    }
+
     if (!this.searchTerm()) {
       return this.books.value();
     }
