@@ -1,5 +1,5 @@
 import { Component, output, signal } from '@angular/core';
-import { Control, FieldState, form, maxLength, minLength, required, schema, submit, validate, ValidationError } from '@angular/forms/signal-experimental';
+import { Control, FieldState, form, maxLength, minLength, required, schema, submit, validate, ValidationError } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
 

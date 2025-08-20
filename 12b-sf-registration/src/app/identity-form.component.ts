@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 
-import { schema, Field, Control, hidden, disabled } from '@angular/forms/signal-experimental';
+import { schema, Field, Control, hidden, disabled } from '@angular/forms/signals';
 
 @Component({
   selector: 'identity-form',

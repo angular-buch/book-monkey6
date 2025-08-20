@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 
-import { ValidationError } from '@angular/forms/signal-experimental';
+import { ValidationError } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-form-error',

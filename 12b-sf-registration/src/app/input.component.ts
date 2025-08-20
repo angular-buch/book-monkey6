@@ -1,6 +1,6 @@
-import { Component, model, input, computed } from '@angular/core';
+import { Component, computed, input, model } from '@angular/core';
+import { FormValueControl, ValidationError } from '@angular/forms/signals';
 
-import { FormValueControl, ValidationError } from '@angular/forms/signal-experimental';
 import { FormErrorComponent } from './form-error.component';
 
 @Component({
@@ -21,14 +21,14 @@ import { FormErrorComponent } from './form-error.component';
   `,
   imports: [FormErrorComponent],
 })
-export class InputComponent implements FormValueControl<string | undefined> {
-  readonly value = model<string>();
+export class InputComponent implements FormValueControl<string> {
+  readonly value = model<string>("");
   readonly label = input.required<string>();
-  readonly errors = input<readonly ValidationError[]>();
-  readonly disabled = input<boolean>();
-  readonly touched = input<boolean>();
+  readonly errors = input<readonly ValidationError[]>([]);
   readonly valid = input<boolean>();
-  readonly readonly = input<boolean>();
+  readonly disabled = input<boolean>(false);
+  readonly touched = input<boolean>(false);
+  readonly readonly = input<boolean>(false);
 
   protected readonly errorsList = computed(() => {
     return this.errors() || [];

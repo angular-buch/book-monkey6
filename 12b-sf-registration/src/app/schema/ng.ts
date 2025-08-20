@@ -1,18 +1,6 @@
-import { apply, pattern, schema, ValidationError } from '@angular/forms/signal-experimental';
+import { apply, pattern, schema, ValidationError } from '@angular/forms/signals';
+import { applyEach, applyWhen, disabled, email, maxLength, min, minLength, required, validate, validateAsync, validateTree } from '@angular/forms/signals';
 
-import {
-  validate,
-  applyEach,
-  required,
-  minLength,
-  maxLength,
-  min,
-  email,
-  validateTree,
-  validateAsync,
-  disabled,
-  applyWhen,
-} from '@angular/forms/signal-experimental';
 import { GenderIdentity, identitySchema } from '../identity-form.component';
 import { confirmationPasswordValidator, vaidateUsername as validateUsername } from '../validators';
 
@@ -30,19 +18,19 @@ export interface RegisterFormData {
 
 export const formSchema = schema<RegisterFormData>((fieldPath) => {
   // username is required and must be between 3 and 12 characters long
-  required(fieldPath.username, { error: ValidationError.required('Username is required')});
+  required(fieldPath.username, { error: ValidationError.required({ message: 'Username is required'})});
   minLength(fieldPath.username, 3, {
-    error: ValidationError.minLength(3, 'A username must be at least 3 characters long')
+    error: ValidationError.minLength(3, { message: 'A username must be at least 3 characters long'})
   });
   maxLength(fieldPath.username, 12, {
-    error: ValidationError.maxLength(12, 'A username can be max. 12 characters long')
+    error: ValidationError.maxLength(12, { message: 'A username can be max. 12 characters long'})
   });
   validateAsync(fieldPath.username, validateUsername);
 
   apply(fieldPath.identity, identitySchema);
 
   min(fieldPath.age, 18, {
-    error: ValidationError.min(18, 'You must be >=18 years old'),
+    error: ValidationError.min(18, { message: 'You must be >=18 years old'}),
   });
 
   // at least one email and each email must match format
@@ -56,25 +44,25 @@ export const formSchema = schema<RegisterFormData>((fieldPath) => {
   );
   applyEach(fieldPath.email, (emailPath) => {
     email(emailPath, {
-      error: ValidationError.email('E-Mail format is invalid'),
+      error: ValidationError.email({ message: 'E-Mail format is invalid'}),
     });
   });
 
   // passwords are required and must match
   required(fieldPath.password.pw1, {
-    error: ValidationError.required('A password is required'),
+    error: ValidationError.required({ message: 'A password is required' }),
   });
   required(fieldPath.password.pw2, {
-    error: ValidationError.required('A password confirmation is required'),
+    error: ValidationError.required({ message: 'A password confirmation is required'}),
   });
   minLength(fieldPath.password.pw1, 8, {
-    error: ValidationError.minLength(8, 'A password must be at least 8 characters long'),
+    error: ValidationError.minLength(8, { message: 'A password must be at least 8 characters long'}),
   });
   pattern(
     fieldPath.password.pw1,
     new RegExp('^.*[!@#$%^&*(),.?":{}|<>\\[\\]\\\\/~`_+=;\'\\-].*$'),
     {
-      error: ValidationError.pattern(new RegExp('^.*[!@#$%^&*(),.?":{}|<>\\[\\]\\\\/~`_+=;\'\\-].*$'), 'The passwort must contain at least one special character')
+      error: ValidationError.pattern(new RegExp('^.*[!@#$%^&*(),.?":{}|<>\\[\\]\\\\/~`_+=;\'\\-].*$'), { message: 'The passwort must contain at least one special character'})
     }
   );
   validateTree(

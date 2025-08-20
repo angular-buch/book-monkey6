@@ -1,6 +1,5 @@
-import { Component, model, input, effect } from '@angular/core';
-
-import { FormValueControl, ValidationError } from '@angular/forms/signal-experimental';
+import { Component, effect, input, model } from '@angular/core';
+import { FormValueControl, ValidationError } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-multiselect',
@@ -39,8 +38,8 @@ export class MultiselectComponent implements FormValueControl<string[]> {
   readonly allTopics = ['Angular', 'Vue', 'React'];
   readonly value = model<string[]>([]);
   readonly label = input.required<string>();
-  readonly errors = input<readonly ValidationError[]>();
-  readonly disabled = input<boolean>();
+  readonly errors = input<readonly ValidationError[]>([]);
+  readonly disabled = input<boolean>(false);
 
   changeInput(topic: string, e: Event) {
     const checked = (e.target as HTMLInputElement).checked;

@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@angular/forms/signal-experimental": ["./experimental"],
+      "@angular/forms/signals": ["./experimental"],
       "@angular/forms/standard_schema": ["./experimental/src/api/validators/standard_schema"]
     },
     "strict": true,

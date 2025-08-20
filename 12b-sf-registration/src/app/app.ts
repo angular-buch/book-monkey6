@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
-import { Control, CustomValidationError, FieldState, form, submit, ValidationError, WithField } from '@angular/forms/signal-experimental';
+import { Control, CustomValidationError, FieldState, form, submit, ValidationError, WithField } from '@angular/forms/signals';
 
 import { FormErrorComponent } from './form-error.component';
 import { IdentityForm } from './identity-form.component';
@@ -89,6 +89,7 @@ const initialState: RegisterFormData = {
         <label>Password
           <input
             type="password"
+            autocomplete
             [control]="f.password.pw1"
             [attr.aria-invalid]="ariaInvalidState(f.password.pw1())">
           @if(f.password.pw1().touched() && f.password.pw1().errors().length) {
@@ -98,6 +99,7 @@ const initialState: RegisterFormData = {
         <label>Password Confirmation
           <input
             type="password"
+            autocomplete
             [control]="f.password.pw2"
             [attr.aria-invalid]="ariaInvalidState(f.password.pw2())">
           @if(f.password.pw2().touched() && f.password.pw2().errors().length) {

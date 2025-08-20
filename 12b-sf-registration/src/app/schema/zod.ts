@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { schema } from '@angular/forms/signal-experimental';
+import { schema } from '@angular/forms/signals';
 import { validateStandardSchema } from '@angular/forms/standard_schema';
 
 export interface RegisterFormData {

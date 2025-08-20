@@ -1,10 +1,6 @@
-import { Signal, resource, inject } from '@angular/core';
-import {
-  AsyncValidatorOptions,
-  FieldPath,
-  TreeValidator,
-  ValidationError,
-} from '@angular/forms/signal-experimental';
+import { inject, resource, Signal } from '@angular/core';
+import { AsyncValidatorOptions, FieldPath, TreeValidator, ValidationError } from '@angular/forms/signals';
+
 import { RegistrationService } from './registration.service';
 
 export function confirmationPasswordValidator(
