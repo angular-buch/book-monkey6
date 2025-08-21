@@ -145,7 +145,7 @@ const initialState: RegisterFormData = {
       @if(f.newsletterTopics().touched() && f.newsletterTopics().errors().length) {
       <app-form-error [errors]="f.newsletterTopics().errors()" />
       }
-      <label>I agreee to the terms and conditions
+      <label>I agree to the terms and conditions
         <input
           type="checkbox"
           [attr.aria-invalid]="ariaInvalidState(f.agreeToTermsAndConditions())"

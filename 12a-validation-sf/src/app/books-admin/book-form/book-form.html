@@ -51,17 +51,12 @@
 
   @let descriptionInvalid = isInvalid(f.description());
   <label for="description">Description</label>
-  <input
-    id="description"
-    [control]="f.description"
-    [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
-    [attr.aria-invalid]="descriptionInvalid" />
-  <!-- <textarea
+  <textarea
     id="description"
     [control]="f.description"
     [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
     [attr.aria-invalid]="descriptionInvalid">
-  </textarea> -->
+  </textarea>
   @if (descriptionInvalid) {
   <small id="description-error">The description is invalid.</small>
   }
