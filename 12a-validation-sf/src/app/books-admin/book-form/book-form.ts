@@ -1,5 +1,5 @@
 import { Component, output, signal } from '@angular/core';
-import { Control, FieldState, form, maxLength, minLength, required, schema, submit, validate, ValidationError } from '@angular/forms/signals';
+import { Control, customError, FieldState, form, maxLength, minLength, required, schema, submit, validate } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
 
@@ -10,7 +10,7 @@ export const formSchema = schema<Book>((fieldPath) => {
   maxLength(fieldPath.isbn, 13);
   validate(fieldPath.authors, ({ value }) =>
     !value().some((a) => a)
-      ? ValidationError.custom({ kind: 'atLeastOneAuthor' })
+      ? customError({ kind: 'atLeastOneAuthor' })
       : undefined
   );
   required(fieldPath.description);

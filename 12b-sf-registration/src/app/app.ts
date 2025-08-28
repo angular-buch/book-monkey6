@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
-import { Control, CustomValidationError, FieldState, form, submit, ValidationError, WithField } from '@angular/forms/signals';
+import { Control, customError, CustomValidationError, FieldState, form, submit, ValidationError, WithField } from '@angular/forms/signals';
 
 import { FormErrorComponent } from './form-error.component';
 import { IdentityForm } from './identity-form.component';
@@ -234,7 +234,7 @@ export class App {
       try {
         await this.registrationService.registerUser(form().value);
       } catch (e) {
-        errors.push(ValidationError.custom({
+        errors.push(customError({
           field: form,
           error: {
             kind: 'serverError',

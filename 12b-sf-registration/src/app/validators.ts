@@ -1,5 +1,5 @@
 import { inject, resource, Signal } from '@angular/core';
-import { AsyncValidatorOptions, FieldPath, TreeValidator, ValidationError } from '@angular/forms/signals';
+import { AsyncValidatorOptions, customError, FieldPath, TreeValidator, ValidationError } from '@angular/forms/signals';
 
 import { RegistrationService } from './registration.service';
 
@@ -10,7 +10,7 @@ export function confirmationPasswordValidator(
     return valueOf(path.pw2) === valueOf(path.pw1)
       ? []
       : [
-          ValidationError.custom({
+          customError({
             field: fieldOf(path.pw2),
             kind: 'confirmationPassword',
             message:
@@ -37,7 +37,7 @@ export const vaidateUsername: AsyncValidatorOptions<string, string, boolean> = {
   errors: (result) => {
     return result
       ? [
-          ValidationError.custom({
+          customError({
             kind: 'userExists',
             message: 'The username you entered was already taken',
           }),
