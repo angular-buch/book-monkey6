@@ -1,5 +1,4 @@
-import { apply, pattern, schema } from '@angular/forms/signals';
-import { applyEach, applyWhen, customError, disabled, email, maxLength, min, minLength, required, validate, validateAsync, validateTree } from '@angular/forms/signals';
+import { apply, pattern, schema, applyEach, applyWhen, customError, disabled, email, maxLength, min, minLength, required, validate, validateAsync, validateTree } from '@angular/forms/signals';
 
 import { GenderIdentity, identitySchema } from '../identity-form.component';
 import { confirmationPasswordValidator, vaidateUsername as validateUsername } from '../validators';
@@ -54,11 +53,10 @@ export const formSchema = schema<RegisterFormData>((fieldPath) => {
     confirmationPasswordValidator(fieldPath.password)
   );
 
-  // error(
-  //   fieldPath.agreeToTermsAndConditions,
-  //   ({ value }) => !value(),
-  //   'You must agree to the terms and conditions'
-  // );
+  required(
+    fieldPath.agreeToTermsAndConditions,
+    { message: 'You must agree to the terms and conditions'}
+  );
 
   applyWhen(
     fieldPath,

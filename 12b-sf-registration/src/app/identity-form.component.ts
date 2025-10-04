@@ -7,7 +7,6 @@ import { schema, Field, Control, hidden, disabled } from '@angular/forms/signals
   imports: [Control],
   template: `
     <label>Gender
-      <!-- TODO: [control] seems not to work with <select> right now? -->
       <select name="gender-identity" [control]="identity().gender">
         <option value="" selected>Please select</option>
         <option value="male">Male</option>
@@ -17,15 +16,15 @@ import { schema, Field, Control, hidden, disabled } from '@angular/forms/signals
     </label>
 
     <div class="group-with-gap">
-      @if (!identity().salutation().disabled()) {
+      @if (!identity().salutation().hidden()) {
       <label>Salutation
         <input
           type="text"
           placeholder="e. g. Mx."
-          [control]="identity().salutation">
+          [control]="identity().salutation" />
       </label>
       }
-      @if (!identity().pronoun().disabled()) {
+      @if (!identity().pronoun().hidden()) {
       <label>Pronoun
         <input
           type="text"
@@ -48,12 +47,10 @@ export interface GenderIdentity {
 }
 
 export const identitySchema = schema<GenderIdentity>((path) => {
-  // TODO: acutally switch to "hidden" once available
-  disabled(path.salutation, ({ valueOf }) => {
+  hidden(path.salutation, ({ valueOf }) => {
     return !valueOf(path.gender) || valueOf(path.gender) !== 'diverse';
   });
-  // TODO: acutally switch to "hidden" once available
-  disabled(path.pronoun, ({ valueOf }) => {
+  hidden(path.pronoun, ({ valueOf }) => {
     return !valueOf(path.gender) || valueOf(path.gender) !== 'diverse';
   });
 });

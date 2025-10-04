@@ -226,13 +226,13 @@ export class App {
   }
 
   protected async submit(e: Event) {
-    e?.preventDefault();
+    e.preventDefault();
 
     await submit(this.f, async (form) => {
       const errors: (WithField<CustomValidationError | ValidationError>)[] = [];
 
       try {
-        await this.registrationService.registerUser(form().value);
+        await this.registrationService.registerUser(form().value());
       } catch (e) {
         errors.push(customError({
           field: form,
