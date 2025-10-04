@@ -6517,7 +6517,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    e?.preventDefault();</span>
+            <span class="d2h-code-line-ctn">    e.preventDefault();</span>
         </div>
     </td>
 </tr><tr>
@@ -6577,7 +6577,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        await this.registrationService.registerUser(form().value);</span>
+            <span class="d2h-code-line-ctn">        await this.registrationService.registerUser(form().value());</span>
         </div>
     </td>
 </tr><tr>
@@ -16162,37 +16162,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -0,0 +1,59 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
+        <div class="d2h-code-side-line">@@ -0,0 +1,56 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -16865,7 +16835,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;!-- TODO: [control] seems not to work with &lt;select&gt; right now? --&gt;</span>
+            <span class="d2h-code-line-ctn">      &lt;select name=&quot;gender-identity&quot; [control]=&quot;identity().gender&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16875,7 +16845,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;select name=&quot;gender-identity&quot; [control]=&quot;identity().gender&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">        &lt;option value=&quot;&quot; selected&gt;Please select&lt;&#x2F;option&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16885,7 +16855,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;option value=&quot;&quot; selected&gt;Please select&lt;&#x2F;option&gt;</span>
+            <span class="d2h-code-line-ctn">        &lt;option value=&quot;male&quot;&gt;Male&lt;&#x2F;option&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16895,7 +16865,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;option value=&quot;male&quot;&gt;Male&lt;&#x2F;option&gt;</span>
+            <span class="d2h-code-line-ctn">        &lt;option value=&quot;female&quot;&gt;Female&lt;&#x2F;option&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16905,7 +16875,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;option value=&quot;female&quot;&gt;Female&lt;&#x2F;option&gt;</span>
+            <span class="d2h-code-line-ctn">        &lt;option value=&quot;diverse&quot;&gt;Diverse&lt;&#x2F;option&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16915,7 +16885,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;option value=&quot;diverse&quot;&gt;Diverse&lt;&#x2F;option&gt;</span>
+            <span class="d2h-code-line-ctn">      &lt;&#x2F;select&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16925,7 +16895,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;&#x2F;select&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;&#x2F;label&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16935,7 +16905,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;&#x2F;label&gt;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -16945,7 +16915,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    &lt;div class=&quot;group-with-gap&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -16955,7 +16925,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;div class=&quot;group-with-gap&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      @if (!identity().salutation().hidden()) {</span>
         </div>
     </td>
 </tr><tr>
@@ -16965,7 +16935,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      @if (!identity().salutation().disabled()) {</span>
+            <span class="d2h-code-line-ctn">      &lt;label&gt;Salutation</span>
         </div>
     </td>
 </tr><tr>
@@ -16975,7 +16945,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;label&gt;Salutation</span>
+            <span class="d2h-code-line-ctn">        &lt;input</span>
         </div>
     </td>
 </tr><tr>
@@ -16985,7 +16955,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;input</span>
+            <span class="d2h-code-line-ctn">          type=&quot;text&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -16995,7 +16965,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          type=&quot;text&quot;</span>
+            <span class="d2h-code-line-ctn">          placeholder=&quot;e. g. Mx.&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -17005,7 +16975,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          placeholder=&quot;e. g. Mx.&quot;</span>
+            <span class="d2h-code-line-ctn">          [control]=&quot;identity().salutation&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -17015,7 +16985,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          [control]=&quot;identity().salutation&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      &lt;&#x2F;label&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -17025,7 +16995,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;&#x2F;label&gt;</span>
+            <span class="d2h-code-line-ctn">      }</span>
         </div>
     </td>
 </tr><tr>
@@ -17035,7 +17005,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      }</span>
+            <span class="d2h-code-line-ctn">      @if (!identity().pronoun().hidden()) {</span>
         </div>
     </td>
 </tr><tr>
@@ -17045,7 +17015,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      @if (!identity().pronoun().disabled()) {</span>
+            <span class="d2h-code-line-ctn">      &lt;label&gt;Pronoun</span>
         </div>
     </td>
 </tr><tr>
@@ -17055,7 +17025,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;label&gt;Pronoun</span>
+            <span class="d2h-code-line-ctn">        &lt;input</span>
         </div>
     </td>
 </tr><tr>
@@ -17065,7 +17035,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;input</span>
+            <span class="d2h-code-line-ctn">          type=&quot;text&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -17075,7 +17045,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          type=&quot;text&quot;</span>
+            <span class="d2h-code-line-ctn">          placeholder=&quot;e. g. they&#x2F;them&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -17085,7 +17055,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          placeholder=&quot;e. g. they&#x2F;them&quot;</span>
+            <span class="d2h-code-line-ctn">          [control]=&quot;identity().pronoun&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -17095,7 +17065,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          [control]=&quot;identity().pronoun&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      &lt;&#x2F;label&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -17105,7 +17075,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;&#x2F;label&gt;</span>
+            <span class="d2h-code-line-ctn">      }</span>
         </div>
     </td>
 </tr><tr>
@@ -17115,7 +17085,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      }</span>
+            <span class="d2h-code-line-ctn">    &lt;&#x2F;div&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -17125,7 +17095,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -17135,7 +17105,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  `,</span>
         </div>
     </td>
 </tr><tr>
@@ -17145,7 +17115,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  `,</span>
+            <span class="d2h-code-line-ctn">})</span>
         </div>
     </td>
 </tr><tr>
@@ -17155,7 +17125,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">})</span>
+            <span class="d2h-code-line-ctn">export class IdentityForm {</span>
         </div>
     </td>
 </tr><tr>
@@ -17165,7 +17135,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class IdentityForm {</span>
+            <span class="d2h-code-line-ctn">  readonly identity = input.required&lt;Field&lt;GenderIdentity&gt;&gt;();</span>
         </div>
     </td>
 </tr><tr>
@@ -17175,7 +17145,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly identity = input.required&lt;Field&lt;GenderIdentity&gt;&gt;();</span>
+            <span class="d2h-code-line-ctn">}</span>
         </div>
     </td>
 </tr><tr>
@@ -17185,7 +17155,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">}</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -17195,7 +17165,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">export interface GenderIdentity {</span>
         </div>
     </td>
 </tr><tr>
@@ -17205,7 +17175,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export interface GenderIdentity {</span>
+            <span class="d2h-code-line-ctn">  gender: &#x27;&#x27; | &#x27;male&#x27; | &#x27;female&#x27; | &#x27;diverse&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -17215,7 +17185,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  gender: &#x27;&#x27; | &#x27;male&#x27; | &#x27;female&#x27; | &#x27;diverse&#x27;;</span>
+            <span class="d2h-code-line-ctn">  salutation: string; &#x2F;&#x2F; e. g. &quot;Mx.&quot;, &quot;Dr.&quot;, etc.</span>
         </div>
     </td>
 </tr><tr>
@@ -17225,7 +17195,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  salutation: string; &#x2F;&#x2F; e. g. &quot;Mx.&quot;, &quot;Dr.&quot;, etc.</span>
+            <span class="d2h-code-line-ctn">  pronoun: string; &#x2F;&#x2F; e. g. &quot;they&#x2F;them&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -17235,7 +17205,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  pronoun: string; &#x2F;&#x2F; e. g. &quot;they&#x2F;them&quot;</span>
+            <span class="d2h-code-line-ctn">}</span>
         </div>
     </td>
 </tr><tr>
@@ -17245,7 +17215,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">}</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -17255,7 +17225,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">export const identitySchema = schema&lt;GenderIdentity&gt;((path) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -17265,7 +17235,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export const identitySchema = schema&lt;GenderIdentity&gt;((path) =&gt; {</span>
+            <span class="d2h-code-line-ctn">  hidden(path.salutation, ({ valueOf }) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -17275,7 +17245,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; TODO: acutally switch to &quot;hidden&quot; once available</span>
+            <span class="d2h-code-line-ctn">    return !valueOf(path.gender) || valueOf(path.gender) !== &#x27;diverse&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -17285,7 +17255,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  disabled(path.salutation, ({ valueOf }) =&gt; {</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -17295,7 +17265,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return !valueOf(path.gender) || valueOf(path.gender) !== &#x27;diverse&#x27;;</span>
+            <span class="d2h-code-line-ctn">  hidden(path.pronoun, ({ valueOf }) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -17305,7 +17275,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    return !valueOf(path.gender) || valueOf(path.gender) !== &#x27;diverse&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -17315,42 +17285,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; TODO: acutally switch to &quot;hidden&quot; once available</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      56
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  disabled(path.pronoun, ({ valueOf }) =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      57
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return !valueOf(path.gender) || valueOf(path.gender) !== &#x27;diverse&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      58
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      59
+      56
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
@@ -20334,27 +20274,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -0,0 +1,82 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
+        <div class="d2h-code-side-line">@@ -0,0 +1,80 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -21177,7 +21097,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { apply, pattern, schema } from &#x27;@angular&#x2F;forms&#x2F;signals&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { apply, pattern, schema, applyEach, applyWhen, customError, disabled, email, maxLength, min, minLength, required, validate, validateAsync, validateTree } from &#x27;@angular&#x2F;forms&#x2F;signals&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -21187,7 +21107,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { applyEach, applyWhen, customError, disabled, email, maxLength, min, minLength, required, validate, validateAsync, validateTree } from &#x27;@angular&#x2F;forms&#x2F;signals&#x27;;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21197,7 +21117,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">import { GenderIdentity, identitySchema } from &#x27;..&#x2F;identity-form.component&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -21207,7 +21127,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { GenderIdentity, identitySchema } from &#x27;..&#x2F;identity-form.component&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { confirmationPasswordValidator, vaidateUsername as validateUsername } from &#x27;..&#x2F;validators&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -21217,7 +21137,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { confirmationPasswordValidator, vaidateUsername as validateUsername } from &#x27;..&#x2F;validators&#x27;;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21227,7 +21147,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">export interface RegisterFormData {</span>
         </div>
     </td>
 </tr><tr>
@@ -21237,7 +21157,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export interface RegisterFormData {</span>
+            <span class="d2h-code-line-ctn">  username: string;</span>
         </div>
     </td>
 </tr><tr>
@@ -21247,7 +21167,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  username: string;</span>
+            <span class="d2h-code-line-ctn">  identity: GenderIdentity;</span>
         </div>
     </td>
 </tr><tr>
@@ -21257,7 +21177,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  identity: GenderIdentity;</span>
+            <span class="d2h-code-line-ctn">  age: number;</span>
         </div>
     </td>
 </tr><tr>
@@ -21267,7 +21187,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  age: number;</span>
+            <span class="d2h-code-line-ctn">  birthday: Date;</span>
         </div>
     </td>
 </tr><tr>
@@ -21277,7 +21197,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  birthday: Date;</span>
+            <span class="d2h-code-line-ctn">  password: { pw1: string; pw2: string };</span>
         </div>
     </td>
 </tr><tr>
@@ -21287,7 +21207,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  password: { pw1: string; pw2: string };</span>
+            <span class="d2h-code-line-ctn">  email: string[];</span>
         </div>
     </td>
 </tr><tr>
@@ -21297,7 +21217,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  email: string[];</span>
+            <span class="d2h-code-line-ctn">  newsletter: boolean;</span>
         </div>
     </td>
 </tr><tr>
@@ -21307,7 +21227,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  newsletter: boolean;</span>
+            <span class="d2h-code-line-ctn">  newsletterTopics: string[];</span>
         </div>
     </td>
 </tr><tr>
@@ -21317,7 +21237,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  newsletterTopics: string[];</span>
+            <span class="d2h-code-line-ctn">  agreeToTermsAndConditions: boolean;</span>
         </div>
     </td>
 </tr><tr>
@@ -21327,7 +21247,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  agreeToTermsAndConditions: boolean;</span>
+            <span class="d2h-code-line-ctn">}</span>
         </div>
     </td>
 </tr><tr>
@@ -21337,7 +21257,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">}</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21347,7 +21267,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">export const formSchema = schema&lt;RegisterFormData&gt;((fieldPath) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -21357,7 +21277,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export const formSchema = schema&lt;RegisterFormData&gt;((fieldPath) =&gt; {</span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; username is required and must be between 3 and 12 characters long</span>
         </div>
     </td>
 </tr><tr>
@@ -21367,7 +21287,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; username is required and must be between 3 and 12 characters long</span>
+            <span class="d2h-code-line-ctn">  required(fieldPath.username, { message: &#x27;Username is required&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21377,7 +21297,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.username, { message: &#x27;Username is required&#x27;});</span>
+            <span class="d2h-code-line-ctn">  minLength(fieldPath.username, 3, { message: &#x27;A username must be at least 3 characters long&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21387,7 +21307,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  minLength(fieldPath.username, 3, { message: &#x27;A username must be at least 3 characters long&#x27;});</span>
+            <span class="d2h-code-line-ctn">  maxLength(fieldPath.username, 12, { message: &#x27;A username can be max. 12 characters long&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21397,7 +21317,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  maxLength(fieldPath.username, 12, { message: &#x27;A username can be max. 12 characters long&#x27;});</span>
+            <span class="d2h-code-line-ctn">  validateAsync(fieldPath.username, validateUsername);</span>
         </div>
     </td>
 </tr><tr>
@@ -21407,7 +21327,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  validateAsync(fieldPath.username, validateUsername);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21417,7 +21337,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  apply(fieldPath.identity, identitySchema);</span>
         </div>
     </td>
 </tr><tr>
@@ -21427,7 +21347,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  apply(fieldPath.identity, identitySchema);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21437,7 +21357,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  min(fieldPath.age, 18, { message: &#x27;You must be &gt;=18 years old&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21447,7 +21367,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  min(fieldPath.age, 18, { message: &#x27;You must be &gt;=18 years old&#x27;});</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21457,7 +21377,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; at least one email and each email must match format</span>
         </div>
     </td>
 </tr><tr>
@@ -21467,7 +21387,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; at least one email and each email must match format</span>
+            <span class="d2h-code-line-ctn">  validate(fieldPath.email, ({ value }) =&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -21477,7 +21397,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  validate(fieldPath.email, ({ value }) =&gt;</span>
+            <span class="d2h-code-line-ctn">    !value().some((e) =&gt; e)</span>
         </div>
     </td>
 </tr><tr>
@@ -21487,7 +21407,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    !value().some((e) =&gt; e)</span>
+            <span class="d2h-code-line-ctn">      ? customError({</span>
         </div>
     </td>
 </tr><tr>
@@ -21497,7 +21417,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ? customError({</span>
+            <span class="d2h-code-line-ctn">          kind: &#x27;atLeastOneEmail&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -21507,7 +21427,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          kind: &#x27;atLeastOneEmail&#x27;,</span>
+            <span class="d2h-code-line-ctn">          message: &#x27;At least one E-Mail address must be added&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -21517,7 +21437,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          message: &#x27;At least one E-Mail address must be added&#x27;,</span>
+            <span class="d2h-code-line-ctn">        })</span>
         </div>
     </td>
 </tr><tr>
@@ -21527,7 +21447,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        })</span>
+            <span class="d2h-code-line-ctn">      : undefined</span>
         </div>
     </td>
 </tr><tr>
@@ -21537,7 +21457,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      : undefined</span>
+            <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
@@ -21547,7 +21467,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  );</span>
+            <span class="d2h-code-line-ctn">  applyEach(fieldPath.email, (emailPath) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -21557,7 +21477,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  applyEach(fieldPath.email, (emailPath) =&gt; {</span>
+            <span class="d2h-code-line-ctn">    email(emailPath, { message: &#x27;E-Mail format is invalid&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21567,7 +21487,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    email(emailPath, { message: &#x27;E-Mail format is invalid&#x27;});</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -21577,7 +21497,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21587,7 +21507,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; passwords are required and must match</span>
         </div>
     </td>
 </tr><tr>
@@ -21597,7 +21517,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; passwords are required and must match</span>
+            <span class="d2h-code-line-ctn">  required(fieldPath.password.pw1, { message: &#x27;A password is required&#x27; });</span>
         </div>
     </td>
 </tr><tr>
@@ -21607,7 +21527,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.password.pw1, { message: &#x27;A password is required&#x27; });</span>
+            <span class="d2h-code-line-ctn">  required(fieldPath.password.pw2, { message: &#x27;A password confirmation is required&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21617,7 +21537,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.password.pw2, { message: &#x27;A password confirmation is required&#x27;});</span>
+            <span class="d2h-code-line-ctn">  minLength(fieldPath.password.pw1, 8, { message: &#x27;A password must be at least 8 characters long&#x27;});</span>
         </div>
     </td>
 </tr><tr>
@@ -21627,7 +21547,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  minLength(fieldPath.password.pw1, 8, { message: &#x27;A password must be at least 8 characters long&#x27;});</span>
+            <span class="d2h-code-line-ctn">  pattern(</span>
         </div>
     </td>
 </tr><tr>
@@ -21637,7 +21557,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  pattern(</span>
+            <span class="d2h-code-line-ctn">    fieldPath.password.pw1,</span>
         </div>
     </td>
 </tr><tr>
@@ -21647,7 +21567,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fieldPath.password.pw1,</span>
+            <span class="d2h-code-line-ctn">    new RegExp(&#x27;^.*[!@#$%^&amp;*(),.?&quot;:{}|&lt;&gt;\\[\\]\\\\&#x2F;~`_+=;\&#x27;\\-].*$&#x27;),</span>
         </div>
     </td>
 </tr><tr>
@@ -21657,7 +21577,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    new RegExp(&#x27;^.*[!@#$%^&amp;*(),.?&quot;:{}|&lt;&gt;\\[\\]\\\\&#x2F;~`_+=;\&#x27;\\-].*$&#x27;),</span>
+            <span class="d2h-code-line-ctn">    { message: &#x27;The passwort must contain at least one special character&#x27;}</span>
         </div>
     </td>
 </tr><tr>
@@ -21667,7 +21587,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    { message: &#x27;The passwort must contain at least one special character&#x27;}</span>
+            <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
@@ -21677,7 +21597,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  );</span>
+            <span class="d2h-code-line-ctn">  validateTree(</span>
         </div>
     </td>
 </tr><tr>
@@ -21687,7 +21607,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  validateTree(</span>
+            <span class="d2h-code-line-ctn">    fieldPath.password,</span>
         </div>
     </td>
 </tr><tr>
@@ -21697,7 +21617,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fieldPath.password,</span>
+            <span class="d2h-code-line-ctn">    confirmationPasswordValidator(fieldPath.password)</span>
         </div>
     </td>
 </tr><tr>
@@ -21707,7 +21627,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    confirmationPasswordValidator(fieldPath.password)</span>
+            <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
@@ -21717,7 +21637,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  );</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21727,7 +21647,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  required(</span>
         </div>
     </td>
 </tr><tr>
@@ -21737,7 +21657,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; error(</span>
+            <span class="d2h-code-line-ctn">    fieldPath.agreeToTermsAndConditions,</span>
         </div>
     </td>
 </tr><tr>
@@ -21747,7 +21667,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F;   fieldPath.agreeToTermsAndConditions,</span>
+            <span class="d2h-code-line-ctn">    { message: &#x27;You must agree to the terms and conditions&#x27;}</span>
         </div>
     </td>
 </tr><tr>
@@ -21757,7 +21677,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F;   ({ value }) =&gt; !value(),</span>
+            <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
@@ -21767,7 +21687,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F;   &#x27;You must agree to the terms and conditions&#x27;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21777,7 +21697,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; );</span>
+            <span class="d2h-code-line-ctn">  applyWhen(</span>
         </div>
     </td>
 </tr><tr>
@@ -21787,7 +21707,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    fieldPath,</span>
         </div>
     </td>
 </tr><tr>
@@ -21797,7 +21717,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  applyWhen(</span>
+            <span class="d2h-code-line-ctn">    ({ value }) =&gt; value().newsletter,</span>
         </div>
     </td>
 </tr><tr>
@@ -21807,7 +21727,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fieldPath,</span>
+            <span class="d2h-code-line-ctn">    (fieldPathWhenTrue) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -21817,7 +21737,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    ({ value }) =&gt; value().newsletter,</span>
+            <span class="d2h-code-line-ctn">      validate(fieldPathWhenTrue.newsletterTopics, ({ value }) =&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -21827,7 +21747,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    (fieldPathWhenTrue) =&gt; {</span>
+            <span class="d2h-code-line-ctn">        !value().length</span>
         </div>
     </td>
 </tr><tr>
@@ -21837,7 +21757,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      validate(fieldPathWhenTrue.newsletterTopics, ({ value }) =&gt;</span>
+            <span class="d2h-code-line-ctn">          ? customError({</span>
         </div>
     </td>
 </tr><tr>
@@ -21847,7 +21767,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        !value().length</span>
+            <span class="d2h-code-line-ctn">              kind: &#x27;noTopicSelected&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -21857,7 +21777,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          ? customError({</span>
+            <span class="d2h-code-line-ctn">              message: &#x27;Select at least one newsletter topic&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -21867,7 +21787,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              kind: &#x27;noTopicSelected&#x27;,</span>
+            <span class="d2h-code-line-ctn">            })</span>
         </div>
     </td>
 </tr><tr>
@@ -21877,7 +21797,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              message: &#x27;Select at least one newsletter topic&#x27;,</span>
+            <span class="d2h-code-line-ctn">          : undefined</span>
         </div>
     </td>
 </tr><tr>
@@ -21887,7 +21807,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            })</span>
+            <span class="d2h-code-line-ctn">      );</span>
         </div>
     </td>
 </tr><tr>
@@ -21897,7 +21817,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          : undefined</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -21907,7 +21827,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      );</span>
+            <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
@@ -21917,7 +21837,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    }</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -21927,7 +21847,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  );</span>
+            <span class="d2h-code-line-ctn">  disabled(</span>
         </div>
     </td>
 </tr><tr>
@@ -21937,7 +21857,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    fieldPath.newsletterTopics,</span>
         </div>
     </td>
 </tr><tr>
@@ -21947,7 +21867,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  disabled(</span>
+            <span class="d2h-code-line-ctn">    ({ valueOf }) =&gt; !valueOf(fieldPath.newsletter)</span>
         </div>
     </td>
 </tr><tr>
@@ -21957,32 +21877,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fieldPath.newsletterTopics,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      80
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    ({ valueOf }) =&gt; !valueOf(fieldPath.newsletter)</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      81
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  );</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      82
+      80
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
@@ -26692,47 +26592,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -0,0 +1,47 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
+        <div class="d2h-code-side-line">@@ -0,0 +1,43 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -27195,7 +27055,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { AsyncValidatorOptions, customError, FieldPath, TreeValidator, ValidationError } from &#x27;@angular&#x2F;forms&#x2F;signals&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { AsyncValidatorOptions, customError, FieldPath, TreeValidator } from &#x27;@angular&#x2F;forms&#x2F;signals&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -27275,7 +27135,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return valueOf(path.pw2) === valueOf(path.pw1)</span>
+            <span class="d2h-code-line-ctn">    if (valueOf(path.pw2) === valueOf(path.pw1)) {</span>
         </div>
     </td>
 </tr><tr>
@@ -27285,7 +27145,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ? []</span>
+            <span class="d2h-code-line-ctn">      return customError({</span>
         </div>
     </td>
 </tr><tr>
@@ -27295,7 +27155,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      : [</span>
+            <span class="d2h-code-line-ctn">        field: fieldOf(path.pw2),</span>
         </div>
     </td>
 </tr><tr>
@@ -27305,7 +27165,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          customError({</span>
+            <span class="d2h-code-line-ctn">        kind: &#x27;confirmationPassword&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -27315,7 +27175,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            field: fieldOf(path.pw2),</span>
+            <span class="d2h-code-line-ctn">        message:</span>
         </div>
     </td>
 </tr><tr>
@@ -27325,7 +27185,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            kind: &#x27;confirmationPassword&#x27;,</span>
+            <span class="d2h-code-line-ctn">          &#x27;The entered password must match with the one specified in &quot;Password&quot; field&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -27335,7 +27195,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            message:</span>
+            <span class="d2h-code-line-ctn">      });</span>
         </div>
     </td>
 </tr><tr>
@@ -27345,7 +27205,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              &#x27;The entered password must match with the one specified in &quot;Password&quot; field&#x27;,</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -27355,7 +27215,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          }),</span>
+            <span class="d2h-code-line-ctn">  };</span>
         </div>
     </td>
 </tr><tr>
@@ -27365,7 +27225,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        ];</span>
+            <span class="d2h-code-line-ctn">}</span>
         </div>
     </td>
 </tr><tr>
@@ -27375,7 +27235,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  };</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -27385,7 +27245,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">}</span>
+            <span class="d2h-code-line-ctn">export const vaidateUsername: AsyncValidatorOptions&lt;string, string, boolean&gt; = {</span>
         </div>
     </td>
 </tr><tr>
@@ -27395,7 +27255,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Reactive params</span>
         </div>
     </td>
 </tr><tr>
@@ -27405,7 +27265,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export const vaidateUsername: AsyncValidatorOptions&lt;string, string, boolean&gt; = {</span>
+            <span class="d2h-code-line-ctn">  params: ({ value }) =&gt; value(),</span>
         </div>
     </td>
 </tr><tr>
@@ -27415,7 +27275,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Reactive params</span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Factory creating a resource</span>
         </div>
     </td>
 </tr><tr>
@@ -27425,7 +27285,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  params: ({ value }) =&gt; value(),</span>
+            <span class="d2h-code-line-ctn">  factory: (username: Signal&lt;string | undefined&gt;) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -27435,7 +27295,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Factory creating a resource</span>
+            <span class="d2h-code-line-ctn">    const registrationService = inject(RegistrationService);</span>
         </div>
     </td>
 </tr><tr>
@@ -27445,7 +27305,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  factory: (params: Signal&lt;string | undefined&gt;) =&gt; {</span>
+            <span class="d2h-code-line-ctn">    return resource({</span>
         </div>
     </td>
 </tr><tr>
@@ -27455,7 +27315,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const registrationService = inject(RegistrationService);</span>
+            <span class="d2h-code-line-ctn">      params: username,</span>
         </div>
     </td>
 </tr><tr>
@@ -27465,7 +27325,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return resource({</span>
+            <span class="d2h-code-line-ctn">      loader: ({ params }) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -27475,7 +27335,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      params,</span>
+            <span class="d2h-code-line-ctn">        return registrationService.checkUserExists(params);</span>
         </div>
     </td>
 </tr><tr>
@@ -27485,7 +27345,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      loader: async ({ params }) =&gt; {</span>
+            <span class="d2h-code-line-ctn">      },</span>
         </div>
     </td>
 </tr><tr>
@@ -27495,7 +27355,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        return await registrationService.checkUserExists(params);</span>
+            <span class="d2h-code-line-ctn">    });</span>
         </div>
     </td>
 </tr><tr>
@@ -27505,7 +27365,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      },</span>
+            <span class="d2h-code-line-ctn">  },</span>
         </div>
     </td>
 </tr><tr>
@@ -27515,7 +27375,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
+            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Maps resource to error</span>
         </div>
     </td>
 </tr><tr>
@@ -27525,7 +27385,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  },</span>
+            <span class="d2h-code-line-ctn">  errors: (result) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -27535,7 +27395,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &#x2F;&#x2F; Maps resource to error</span>
+            <span class="d2h-code-line-ctn">    if (result) {</span>
         </div>
     </td>
 </tr><tr>
@@ -27545,7 +27405,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  errors: (result) =&gt; {</span>
+            <span class="d2h-code-line-ctn">      return customError({</span>
         </div>
     </td>
 </tr><tr>
@@ -27555,7 +27415,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return result</span>
+            <span class="d2h-code-line-ctn">        kind: &#x27;userExists&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -27565,7 +27425,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ? [</span>
+            <span class="d2h-code-line-ctn">        message: &#x27;The username you entered was already taken&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -27575,7 +27435,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          customError({</span>
+            <span class="d2h-code-line-ctn">      });</span>
         </div>
     </td>
 </tr><tr>
@@ -27585,7 +27445,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            kind: &#x27;userExists&#x27;,</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -27595,52 +27455,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            message: &#x27;The username you entered was already taken&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      43
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          }),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      44
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        ]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      45
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      : undefined;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      46
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  },</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      47
+      43
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
