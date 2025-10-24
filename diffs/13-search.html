@@ -1827,7 +1827,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  validate(fieldPath.authors, ({ value }) =&gt;</span>
+            <span class="d2h-code-line-ctn">  validate(fieldPath.authors, (ctx) =&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1837,7 +1837,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    !value().some((a) =&gt; a)</span>
+            <span class="d2h-code-line-ctn">    !ctx.value().some((a) =&gt; a)</span>
         </div>
     </td>
 </tr><tr>
