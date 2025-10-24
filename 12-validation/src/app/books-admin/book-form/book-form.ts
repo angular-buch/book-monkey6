@@ -8,8 +8,8 @@ export const formSchema = schema<Book>((fieldPath) => {
   required(fieldPath.isbn);
   minLength(fieldPath.isbn, 13);
   maxLength(fieldPath.isbn, 13);
-  validate(fieldPath.authors, ({ value }) =>
-    !value().some((a) => a)
+  validate(fieldPath.authors, (ctx) =>
+    !ctx.value().some((a) => a)
       ? customError({ kind: 'atLeastOneAuthor' })
       : undefined
   );
