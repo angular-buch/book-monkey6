@@ -1,44 +1,44 @@
-import { Component, output } from '@angular/core';
-import { FormArray, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, output, signal } from '@angular/core';
+import { Field, form, submit } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
-
 @Component({
   selector: 'app-book-form',
-  imports: [ReactiveFormsModule],
+  imports: [Field],
   templateUrl: './book-form.html',
   styleUrl: './book-form.scss'
 })
 export class BookForm {
   readonly submitBook = output<Book>();
 
-  protected bookForm = new FormGroup({
-    isbn: new FormControl('', { nonNullable: true }),
-    title: new FormControl('', { nonNullable: true }),
-    subtitle: new FormControl('', { nonNullable: true }),
-    description: new FormControl('', { nonNullable: true }),
-    authors: new FormArray([
-      new FormControl('', { nonNullable: true })
-    ]),
-    imageUrl: new FormControl('', { nonNullable: true })
-  });
+  readonly #book = signal({
+    isbn: '',
+    title: '',
+    subtitle: '',
+    authors: [''],
+    description: '',
+    imageUrl: '',
+    createdAt: new Date().toISOString(),
+  } satisfies Book);
+  protected readonly bookForm = form(this.#book);
 
   addAuthorControl() {
-    this.bookForm.controls.authors.push(
-      new FormControl('', { nonNullable: true })
-    );
+    this.bookForm.authors().value.update((authors) => [...authors, '']);
   }
 
-  submitForm() {
-    const formValue = this.bookForm.getRawValue();
-    const authors = formValue.authors.filter(author => !!author);
+  async submitForm(e: Event) {
+    e.preventDefault();
 
-    const newBook: Book = {
-      ...formValue,
-      authors,
-      createdAt: new Date().toISOString()
-    };
+    await submit(this.bookForm, async (form) => {
+      const formValue = form().value();
+      const authors = formValue.authors.filter(author => !!author);
 
-    this.submitBook.emit(newBook);
+      const newBook: Book = {
+        ...formValue,
+        authors,
+        createdAt: new Date().toISOString()
+      };
+      this.submitBook.emit(newBook);
+    });
   }
 }

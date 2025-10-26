@@ -1,61 +1,66 @@
-import { Component, output } from '@angular/core';
-import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, output, signal } from '@angular/core';
+import { Field, FieldState, form, submit, schema, required, minLength, maxLength, validate, customError, FieldTree } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
 
+export const formSchema = schema<Book>((fieldPath) => {
+  required(fieldPath.title);
+  required(fieldPath.isbn);
+  minLength(fieldPath.isbn, 13);
+  maxLength(fieldPath.isbn, 13);
+  validate(fieldPath.authors, (ctx) =>
+    !ctx.value().some((a) => a)
+      ? customError({ kind: 'atLeastOneAuthor' })
+      : undefined
+  );
+  required(fieldPath.description);
+  required(fieldPath.imageUrl);
+});
+
 @Component({
   selector: 'app-book-form',
-  imports: [ReactiveFormsModule],
+  imports: [Field],
   templateUrl: './book-form.html',
   styleUrl: './book-form.scss'
 })
 export class BookForm {
   readonly submitBook = output<Book>();
 
-  protected bookForm = new FormGroup({
-    isbn: new FormControl('', {
-      nonNullable: true,
-      validators: [
-        Validators.required,
-        Validators.minLength(13),
-        Validators.maxLength(13),
-      ]
-    }),
-    title: new FormControl('', {
-      nonNullable: true,
-      validators: Validators.required,
-    }),
-    subtitle: new FormControl('', { nonNullable: true }),
-    description: new FormControl('', { nonNullable: true }),
-    authors: new FormArray([
-      new FormControl('', { nonNullable: true })
-    ]),
-    imageUrl: new FormControl('', { nonNullable: true })
-  });
+  readonly #book = signal({
+    isbn: '',
+    title: '',
+    subtitle: '',
+    authors: [''],
+    description: '',
+    imageUrl: '',
+    createdAt: new Date().toISOString(),
+  } satisfies Book);
+  protected readonly bookForm = form(this.#book, formSchema);
 
   addAuthorControl() {
-    this.bookForm.controls.authors.push(
-      new FormControl('', { nonNullable: true })
-    );
+    this.bookForm.authors().value.update((authors) => [...authors, '']);
   }
 
-  isInvalid(control: FormControl) {
-    if (!control.touched) {
+  isInvalid(field: FieldTree<unknown>) {
+    if (!field().touched()) {
       return null;
     }
-    return control.invalid && control.touched;
+    return field().invalid();
   }
 
-  submitForm() {
-    const formValue = this.bookForm.getRawValue();
-    const authors = formValue.authors.filter(author => !!author);
+  async submitForm(e: Event) {
+    e.preventDefault();
 
-    const newBook: Book = {
-      ...formValue,
-      authors,
-      createdAt: new Date().toISOString()
-    };
+    await submit(this.bookForm, async (form) => {
+      const formValue = form().value();
+      const authors = formValue.authors.filter(author => !!author);
 
-    this.submitBook.emit(newBook);
+      const newBook: Book = {
+        ...formValue,
+        authors,
+        createdAt: new Date().toISOString()
+      };
+      this.submitBook.emit(newBook);
+    });
   }
 }

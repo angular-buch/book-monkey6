@@ -1,34 +1,36 @@
-@let c = bookForm.controls;
-
-<form [formGroup]="bookForm" (ngSubmit)="submitForm()">
+<form (submit)="submitForm($event)">
   <label for="title">Title</label>
-  <input type="text" id="title" [formControl]="c.title" />
+  <input type="text" id="title" [field]="bookForm.title" />
 
   <label for="subtitle">Subtitle</label>
-  <input type="text" id="subtitle" [formControl]="c.subtitle" />
+  <input type="text" id="subtitle" [field]="bookForm.subtitle" />
 
   <label for="isbn">ISBN</label>
-  <input type="text" id="isbn" [formControl]="c.isbn" />
+  <input type="text" id="isbn" [field]="bookForm.isbn" />
 
   <fieldset>
     <legend>Authors</legend>
     <button type="button" (click)="addAuthorControl()">Add Author</button>
     <div role="group">
-      @for (authorControl of c.authors.controls; track $index) {
+      @for (authorControl of bookForm.authors; track $index) {
       <input
         type="text"
-        [attr.aria-label]="'Author ' + $index + 1"
-        [formControl]="authorControl"
+        [attr.aria-label]="`Author ${$index + 1}`"
+        [field]="authorControl"
       />
       }
     </div>
   </fieldset>
 
   <label for="description">Description</label>
-  <textarea id="description" [formControl]="c.description"></textarea>
+  <textarea id="description" [field]="bookForm.description"></textarea>
 
   <label for="imageUrl">Thumbnail URL</label>
-  <input type="url" id="imageUrl" [formControl]="c.imageUrl" />
+  <input type="url" id="imageUrl" [field]="bookForm.imageUrl" />
 
-  <button type="submit">Save</button>
+  <button
+    type="submit"
+    [attr.aria-busy]="bookForm().submitting()">
+    Save
+  </button>
 </form>

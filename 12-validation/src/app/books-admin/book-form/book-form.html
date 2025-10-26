@@ -1,10 +1,10 @@
 <form (submit)="submitForm($event)">
-  @let titleInvalid = isInvalid(f.title());
+  @let titleInvalid = isInvalid(bookForm.title);
   <label for="title">Title</label>
   <input
     type="text"
     id="title"
-    [field]="f.title"
+    [field]="bookForm.title"
     [attr.aria-describedby]="titleInvalid ? 'title-error' : null"
     [attr.aria-invalid]="titleInvalid"
   />
@@ -13,14 +13,14 @@
   }
 
   <label for="subtitle">Subtitle</label>
-  <input type="text" id="subtitle" [field]="f.subtitle" />
+  <input type="text" id="subtitle" [field]="bookForm.subtitle" />
 
-  @let isbnInvalid = isInvalid(f.isbn());
+  @let isbnInvalid = isInvalid(bookForm.isbn);
   <label for="isbn">ISBN</label>
   <input
     type="text"
     id="isbn"
-    [field]="f.isbn"
+    [field]="bookForm.isbn"
     [attr.aria-describedby]="isbnInvalid ? 'isbn-error' : null"
     [attr.aria-invalid]="isbnInvalid"
   />
@@ -31,29 +31,29 @@
   <fieldset>
     <legend>Authors</legend>
     <button type="button" (click)="addAuthorControl()">Add Author</button>
-    @let authorsInvalid = isInvalid(f.authors());
+    @let authorsInvalid = isInvalid(bookForm.authors);
     <div role="group">
-      @for (authorControl of f.authors; track $index) {
+      @for (authorControl of bookForm.authors; track $index) {
       <input
         type="text"
-        [attr.aria-label]="'Author ' + $index + 1"
+        [attr.aria-label]="`Author ${$index + 1}`"
         [field]="authorControl"
         [attr.aria-describedby]="authorsInvalid ? 'authors-error' : null"
         [attr.aria-invalid]="authorsInvalid"
       />
       }
       @if (authorsInvalid) {
-        <small id="authors-error">At least one author must be added.</small>
+      <small id="authors-error">At least one author must be added.</small>
       }
     </div>
 
   </fieldset>
 
-  @let descriptionInvalid = isInvalid(f.description());
+  @let descriptionInvalid = isInvalid(bookForm.description);
   <label for="description">Description</label>
   <textarea
     id="description"
-    [field]="f.description"
+    [field]="bookForm.description"
     [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
     [attr.aria-invalid]="descriptionInvalid">
   </textarea>
@@ -61,17 +61,22 @@
   <small id="description-error">The description is invalid.</small>
   }
 
-  @let imageUrlInvalid = isInvalid(f.imageUrl());
+  @let imageUrlInvalid = isInvalid(bookForm.imageUrl);
   <label for="imageUrl">Thumbnail URL</label>
   <input
     type="url"
     id="imageUrl"
-    [field]="f.imageUrl"
-    [attr.aria-describedby]="imageUrlInvalid ? 'description-error' : null"
+    [field]="bookForm.imageUrl"
+    [attr.aria-describedby]="imageUrlInvalid ? 'image-url-error' : null"
     [attr.aria-invalid]="imageUrlInvalid" />
   @if (imageUrlInvalid) {
   <small id="image-url-error">The URL is invalid.</small>
   }
 
-  <button type="submit" [disabled]="f().invalid()" [attr.aria-busy]="f().submitting()" >Save</button>
+  <button
+    type="submit"
+    [disabled]="bookForm().invalid()"
+    [attr.aria-busy]="bookForm().submitting()">
+    Save
+  </button>
 </form>

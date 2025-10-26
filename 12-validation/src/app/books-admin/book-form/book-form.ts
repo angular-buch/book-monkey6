@@ -1,5 +1,5 @@
 import { Component, output, signal } from '@angular/core';
-import { customError, Field, FieldState, form, maxLength, minLength, required, schema, submit, validate } from '@angular/forms/signals';
+import { Field, form, submit, schema, required, minLength, maxLength, validate, customError, FieldTree } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
 
@@ -26,32 +26,32 @@ export const formSchema = schema<Book>((fieldPath) => {
 export class BookForm {
   readonly submitBook = output<Book>();
 
-  private readonly book = signal({
-    isbn: "",
-    title: "",
-    subtitle: "",
-    authors: [""],
-    description: "",
-    imageUrl: "",
+  readonly #book = signal({
+    isbn: '',
+    title: '',
+    subtitle: '',
+    authors: [''],
+    description: '',
+    imageUrl: '',
     createdAt: new Date().toISOString(),
   } satisfies Book);
-  protected readonly f = form(this.book, formSchema);
+  protected readonly bookForm = form(this.#book, formSchema);
 
   addAuthorControl() {
-    this.f.authors().value.update((authors) => [...authors, '']);
+    this.bookForm.authors().value.update((authors) => [...authors, '']);
   }
 
-  isInvalid(field: FieldState<unknown>) {
-    if (!field.touched()) {
+  isInvalid(field: FieldTree<unknown>) {
+    if (!field().touched()) {
       return null;
     }
-    return field.invalid() && field.touched();
+    return field().invalid();
   }
 
   async submitForm(e: Event) {
     e.preventDefault();
 
-    await submit(this.f, async (form) => {
+    await submit(this.bookForm, async (form) => {
       const formValue = form().value();
       const authors = formValue.authors.filter(author => !!author);
 
