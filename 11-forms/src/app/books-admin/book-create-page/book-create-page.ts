@@ -1,13 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Field, form, submit } from '@angular/forms/signals';
 import { Router } from '@angular/router';
 
-import { BookForm } from '../book-form/book-form';
-import { BookStore } from '../../shared/book-store';
 import { Book } from '../../shared/book';
+import { BookStore } from '../../shared/book-store';
 
 @Component({
   selector: 'app-book-create-page',
-  imports: [BookForm],
+  imports: [Field],
   templateUrl: './book-create-page.html',
   styleUrl: './book-create-page.scss'
 })
@@ -15,9 +15,36 @@ export class BookCreatePage {
   #bookStore = inject(BookStore);
   #router = inject(Router);
 
-  createBook(book: Book) {
-    this.#bookStore.create(book).subscribe(createdBook => {
-      this.#router.navigate(['/books', 'details', createdBook.isbn]);
+  readonly #book = signal({
+    isbn: '',
+    title: '',
+    subtitle: '',
+    authors: [''],
+    description: '',
+    imageUrl: '',
+    createdAt: new Date().toISOString(),
+  } satisfies Book);
+  protected readonly bookForm = form(this.#book);
+
+  addAuthorControl() {
+    this.bookForm.authors().value.update((authors) => [...authors, '']);
+  }
+
+  async submitForm(e: Event) {
+    e.preventDefault();
+
+    await submit(this.bookForm, async (form) => {
+      const formValue = form().value();
+      const authors = formValue.authors.filter(author => !!author);
+
+      const newBook: Book = {
+        ...formValue,
+        authors,
+        createdAt: new Date().toISOString()
+      };
+      this.#bookStore.create(newBook).subscribe(createdBook => {
+        this.#router.navigate(['/books', 'details', createdBook.isbn]);
+      });
     });
   }
 }
