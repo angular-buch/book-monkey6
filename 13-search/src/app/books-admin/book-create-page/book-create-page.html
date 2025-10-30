@@ -8,7 +8,7 @@
     id="title"
     [field]="bookForm.title"
     [attr.aria-describedby]="titleInvalid ? 'title-error' : null"
-    [attr.aria-invalid]="titleInvalid"
+    [ariaInvalid]="titleInvalid"
   />
   @if (titleInvalid) {
   <small id="title-error">The title is invalid.</small>
@@ -24,7 +24,7 @@
     id="isbn"
     [field]="bookForm.isbn"
     [attr.aria-describedby]="isbnInvalid ? 'isbn-error' : null"
-    [attr.aria-invalid]="isbnInvalid"
+    [ariaInvalid]="isbnInvalid"
   />
   @if (isbnInvalid) {
   <small id="isbn-error">The ISBN is invalid.</small>
@@ -32,16 +32,16 @@
 
   <fieldset>
     <legend>Authors</legend>
-    <button type="button" (click)="addAuthorControl()">Add Author</button>
+    <button type="button" (click)="addAuthorField()">Add Author</button>
     @let authorsInvalid = isInvalid(bookForm.authors);
     <div role="group">
-      @for (authorControl of bookForm.authors; track $index) {
+      @for (authorField of bookForm.authors; track $index) {
       <input
         type="text"
-        [attr.aria-label]="`Author ${$index + 1}`"
-        [field]="authorControl"
+        [ariaLabel]="`Author ${$index + 1}`"
+        [field]="authorField"
         [attr.aria-describedby]="authorsInvalid ? 'authors-error' : null"
-        [attr.aria-invalid]="authorsInvalid"
+        [ariaInvalid]="authorsInvalid"
       />
       }
       @if (authorsInvalid) {
@@ -57,7 +57,7 @@
     id="description"
     [field]="bookForm.description"
     [attr.aria-describedby]="descriptionInvalid ? 'description-error' : null"
-    [attr.aria-invalid]="descriptionInvalid">
+    [ariaInvalid]="descriptionInvalid">
   </textarea>
   @if (descriptionInvalid) {
   <small id="description-error">The description is invalid.</small>
@@ -70,7 +70,7 @@
     id="imageUrl"
     [field]="bookForm.imageUrl"
     [attr.aria-describedby]="imageUrlInvalid ? 'image-url-error' : null"
-    [attr.aria-invalid]="imageUrlInvalid" />
+    [ariaInvalid]="imageUrlInvalid" />
   @if (imageUrlInvalid) {
   <small id="image-url-error">The URL is invalid.</small>
   }
@@ -78,7 +78,7 @@
   <button
     type="submit"
     [disabled]="bookForm().invalid()"
-    [attr.aria-busy]="bookForm().submitting()">
+    [ariaBusy]="bookForm().submitting()">
     Save
   </button>
 </form>

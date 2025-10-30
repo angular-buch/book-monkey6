@@ -12,13 +12,13 @@
 
   <fieldset>
     <legend>Authors</legend>
-    <button type="button" (click)="addAuthorControl()">Add Author</button>
+    <button type="button" (click)="addAuthorField()">Add Author</button>
     <div role="group">
-      @for (authorControl of bookForm.authors; track $index) {
+      @for (authorField of bookForm.authors; track $index) {
       <input
         type="text"
-        [attr.aria-label]="`Author ${$index + 1}`"
-        [field]="authorControl"
+        [ariaLabel]="`Author ${$index + 1}`"
+        [field]="authorField"
       />
       }
     </div>
@@ -32,7 +32,7 @@
 
   <button
     type="submit"
-    [attr.aria-busy]="bookForm().submitting()">
+    [ariaBusy]="bookForm().submitting()">
     Save
   </button>
 </form>

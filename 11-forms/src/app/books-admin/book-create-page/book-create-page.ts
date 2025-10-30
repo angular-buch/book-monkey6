@@ -26,11 +26,11 @@ export class BookCreatePage {
   } satisfies Book);
   protected readonly bookForm = form(this.#book);
 
-  addAuthorControl() {
+  addAuthorField() {
     this.bookForm.authors().value.update((authors) => [...authors, '']);
   }
 
-  async submitForm(e: Event) {
+  async submitForm(e: SubmitEvent) {
     e.preventDefault();
 
     await submit(this.bookForm, async (form) => {
