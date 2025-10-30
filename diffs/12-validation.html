@@ -544,7 +544,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorControl()&quot;&gt;Add Author&lt;&#x2F;button&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorField()&quot;&gt;Add Author&lt;&#x2F;button&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -574,7 +574,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      @for (authorControl of bookForm.authors; track $index) {</span>
+            <span class="d2h-code-line-ctn">      @for (authorField of bookForm.authors; track $index) {</span>
         </div>
     </td>
 </tr><tr>
@@ -604,7 +604,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">        [attr.aria-label]=&quot;`Author ${$index + 1}`&quot;</span>
+            <span class="d2h-code-line-ctn">        [ariaLabel]=&quot;`Author ${$index + 1}`&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -614,7 +614,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">        [field]=&quot;authorControl&quot;</span>
+            <span class="d2h-code-line-ctn">        [field]=&quot;authorField&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1004,7 +1004,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-busy]=&quot;bookForm().submitting()&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    [ariaBusy]=&quot;bookForm().submitting()&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1148,7 +1148,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-invalid]=&quot;titleInvalid&quot;</span>
+            <span class="d2h-code-line-ctn">    [ariaInvalid]=&quot;titleInvalid&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1308,7 +1308,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-invalid]=&quot;isbnInvalid&quot;</span>
+            <span class="d2h-code-line-ctn">    [ariaInvalid]=&quot;isbnInvalid&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1388,7 +1388,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorControl()&quot;&gt;Add Author&lt;&#x2F;button&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorField()&quot;&gt;Add Author&lt;&#x2F;button&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1418,7 +1418,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      @for (authorControl of bookForm.authors; track $index) {</span>
+            <span class="d2h-code-line-ctn">      @for (authorField of bookForm.authors; track $index) {</span>
         </div>
     </td>
 </tr><tr>
@@ -1448,7 +1448,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">        [attr.aria-label]=&quot;`Author ${$index + 1}`&quot;</span>
+            <span class="d2h-code-line-ctn">        [ariaLabel]=&quot;`Author ${$index + 1}`&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1458,7 +1458,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">        [field]=&quot;authorControl&quot;</span>
+            <span class="d2h-code-line-ctn">        [field]=&quot;authorField&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1478,7 +1478,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        [attr.aria-invalid]=&quot;authorsInvalid&quot;</span>
+            <span class="d2h-code-line-ctn">        [ariaInvalid]=&quot;authorsInvalid&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1638,7 +1638,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-invalid]=&quot;descriptionInvalid&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    [ariaInvalid]=&quot;descriptionInvalid&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1768,7 +1768,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-invalid]=&quot;imageUrlInvalid&quot; &#x2F;&gt;</span>
+            <span class="d2h-code-line-ctn">    [ariaInvalid]=&quot;imageUrlInvalid&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1848,7 +1848,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    [attr.aria-busy]=&quot;bookForm().submitting()&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">    [ariaBusy]=&quot;bookForm().submitting()&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -2202,7 +2202,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
+            <span class="d2h-code-line-ctn">  addAuthorField() {</span>
         </div>
     </td>
 </tr><tr>
@@ -2312,7 +2312,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  async submitForm(e: Event) {</span>
+            <span class="d2h-code-line-ctn">  async submitForm(e: SubmitEvent) {</span>
         </div>
     </td>
 </tr><tr>
@@ -2651,7 +2651,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
+            <span class="d2h-code-line-ctn">  addAuthorField() {</span>
         </div>
     </td>
 </tr><tr>
@@ -2761,7 +2761,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  async submitForm(e: Event) {</span>
+            <span class="d2h-code-line-ctn">  async submitForm(e: SubmitEvent) {</span>
         </div>
     </td>
 </tr><tr>
