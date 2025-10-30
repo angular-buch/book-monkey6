@@ -3,9 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BooksOverviewPage } from './books-overview-page';
 
 describe('BooksOverviewPage', () => {
-
-  let fixture: ComponentFixture<BooksOverviewPage>;
   let component: BooksOverviewPage;
+  let fixture: ComponentFixture<BooksOverviewPage>;
 
   // Arrange
   beforeEach(async () => {
@@ -16,14 +15,12 @@ describe('BooksOverviewPage', () => {
 
     fixture = TestBed.createComponent(BooksOverviewPage);
     component = fixture.componentInstance;
-
   });
 
   it('should have a list of 2 books', () => {
-
     // Act
-    // (Signal wird bereits im Konstruktor gesetzt)
-    const books = component.books();
+    // Daten aus Signal auslesen, dieses wird bereits im Konstruktor gesetzt
+    const books = component['books']();
 
     // Assert
     expect(books.length).toBe(2);
@@ -31,8 +28,7 @@ describe('BooksOverviewPage', () => {
     expect(books[1].title).toContain('Backen mit Affen');
   });
 
-  it('should render the correct book titles in the DOM', () => {
-
+  it('should render the correct book titles', () => {
     // Act
     // Durch detectChanges() wird das Template "gerendert"
     fixture.detectChanges();
@@ -46,5 +42,4 @@ describe('BooksOverviewPage', () => {
     expect(articleEls[0].textContent).toContain('Tierisch gut kochen');
     expect(articleEls[1].textContent).toContain('Backen mit Affen');
   });
-
 });
