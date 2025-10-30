@@ -15,7 +15,7 @@ export class BookCreatePage {
   #bookStore = inject(BookStore);
   #router = inject(Router);
 
-  readonly #book = signal({
+  readonly #book = signal<Required<Book>>({
     isbn: '',
     title: '',
     subtitle: '',
@@ -23,7 +23,7 @@ export class BookCreatePage {
     description: '',
     imageUrl: '',
     createdAt: new Date().toISOString(),
-  } satisfies Book);
+  });
   protected readonly bookForm = form(this.#book);
 
   addAuthorField() {
