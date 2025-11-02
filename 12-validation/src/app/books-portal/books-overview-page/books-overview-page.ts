@@ -1,4 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
+import { Field, form } from '@angular/forms/signals';
 
 import { Book } from '../../shared/book';
 import { BookCard } from '../book-card/book-card';
@@ -6,7 +7,7 @@ import { BookStore } from '../../shared/book-store';
 
 @Component({
   selector: 'app-books-overview-page',
-  imports: [BookCard],
+  imports: [BookCard, Field],
   templateUrl: './books-overview-page.html',
   styleUrl: './books-overview-page.scss',
 })
@@ -14,6 +15,7 @@ export class BooksOverviewPage {
   #bookStore = inject(BookStore);
 
   protected searchTerm = signal('');
+  protected searchField = form(this.searchTerm);
 
   protected books = this.#bookStore.getAll();
   protected likedBooks = signal<Book[]>([]);

@@ -19,9 +19,7 @@
   <div>
     <input
       type="search"
-      #searchInput
-      (input)="this.searchTerm.set(searchInput.value)"
-      [value]="this.searchTerm()"
+      [field]="searchField"
       placeholder="Search"
       aria-label="Search"
     />
