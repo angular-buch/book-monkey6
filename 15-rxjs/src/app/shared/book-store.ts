@@ -15,7 +15,7 @@ export class BookStore {
     return httpResource<Book[]>(
       () => ({
         url: `${this.#apiUrl}/books`,
-        params: { search: searchTerm() }
+        params: { filter: searchTerm() }
       }),
       { defaultValue: [] }
     );
