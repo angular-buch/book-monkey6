@@ -1,1 +1,0 @@
-import{Ta as a,Ua as n,bb as m,za as o}from"./chunk-YKOFH7IK.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(a(0,"h1"),m(1,"Welcome to the BookMonkey!"),n())},encapsulation:2})};export{i as HomePage};
