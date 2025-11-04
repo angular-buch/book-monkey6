@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 
+import { booksPortalRoutes } from '../books-portal.routes';
 import { BooksOverviewPage } from './books-overview-page';
 
-describe('BooksOverviewPage', () => {
-  let component: BooksOverviewPage;
-  let fixture: ComponentFixture<BooksOverviewPage>;
+describe('BooksOverviewPage Routing', () => {
+  it('should load the BooksOverviewPage for /books', async () => {
+    TestBed.configureTestingModule({
+      imports: [BooksOverviewPage],
+      providers: [provideRouter(booksPortalRoutes)]
+    });
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BooksOverviewPage]
-    })
-    .compileComponents();
+    const harness = await RouterTestingHarness.create();
+    const component = await harness.navigateByUrl('/books', BooksOverviewPage);
 
-    fixture = TestBed.createComponent(BooksOverviewPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
     expect(component).toBeTruthy();
+    expect(document.title).toBe('Books');
   });
 });
