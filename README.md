@@ -2,15 +2,15 @@
 
 <img src="https://bm6.angular-buch.com/assets/book-cover-v4.png" alt="Coverbild des Angular-Buchs" width="150" align="left">
 
-Auf dieser Seite finden Sie alle Ressourcen rund um das Beispielprojekt BookMonkey aus dem Angular-Buch. Neben einer Live-Demo können Sie die Änderungen am Quellcode mit unserer Differenzansicht nachvollziehen.
+Auf dieser Seite findest du alle Ressourcen rund um das Beispielprojekt BookMonkey aus dem Angular-Buch. Neben einer Live-Demo kannst du die Änderungen am Quellcode mit unserer Differenzansicht nachvollziehen.
 
-**Alle Infos zum Buch finden Sie auf unserer Website:**
+**Alle Infos zum Buch findest du auf unserer Website:**
 [https://angular-buch.com](https://angular-buch.com)
 
 <br><br><br><br>
 
 
-Hier finden Sie eine Übersicht aller Entwicklungsstufen des BookMonkey-Projekts. Jede Stufe zeigt die schrittweisen Änderungen im Code, sodass Sie die Entwicklung der Anwendung nachvollziehen können. Sie können sich ebenso den Quellcode und eine Live-Demo der einzelnen Entwicklungsstufen ansehen.<br><br>
+Hier findest du eine Übersicht aller Entwicklungsstufen des BookMonkey-Projekts. Jede Stufe zeigt die schrittweisen Änderungen im Code, sodass du die Entwicklung der Anwendung nachvollziehen kannst. Außerdem findest du hier den Quellcode und eine Live-Demo der einzelnen Entwicklungsstufen.<br><br>
 
 | Projekt | Verweise | Kapitel im Buch |
 |---------|----------|----------------|
@@ -51,7 +51,7 @@ Der BookMonkey verwendet vorbereitete Stylesheets. Den Quelltext stellen wir hie
 
 ## ⚠️ Achtung: 5. Auflage
 
-Dies ist das Beispielprojekt für das Angular-Buch der 5. Auflage! Falls Sie eine andere Auflage des Buchs besitzen, finden Sie den Beispielcode in folgenden anderen Repositorys:
+Dies ist das Beispielprojekt für das Angular-Buch der 5. Auflage! Falls du eine andere Auflage des Buchs besitzt, findest du den Beispielcode in folgenden anderen Repositorys:
 
 - [1. Auflage (2017): `book-monkey2`](https://github.com/angular-buch/book-monkey2)
 - [2. Auflage (2019): `book-monkey3`](https://github.com/angular-buch/book-monkey3)
@@ -63,7 +63,7 @@ Dies ist das Beispielprojekt für das Angular-Buch der 5. Auflage! Falls Sie ein
 
 ## Fehler gefunden oder Fragen?
 
-  Sie haben einen Fehler entdeckt oder haben Fragen und Anregungen zum Buch?<br>Bitte schreiben Sie uns: [team@angular-buch.com](mailto:team@angular-buch.com)
+  Du hast einen Fehler entdeckt oder hast Fragen und Anregungen zum Buch?<br>Bitte schreibe uns: [team@angular-buch.com](mailto:team@angular-buch.com)
 
 
 **Angular-Buch-Team** | **Ferdinand Malcher, Danny Koppenhagen, Johannes Hoppe**<br>
