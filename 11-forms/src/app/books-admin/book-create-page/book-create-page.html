@@ -17,7 +17,7 @@
       @for (authorField of bookForm.authors; track $index) {
       <input
         type="text"
-        [ariaLabel]="`Author ${$index + 1}`"
+        [aria-label]="`Author ${$index + 1}`"
         [field]="authorField"
       />
       }
@@ -32,7 +32,7 @@
 
   <button
     type="submit"
-    [ariaBusy]="bookForm().submitting()">
+    [aria-busy]="bookForm().submitting()">
     Save
   </button>
 </form>
