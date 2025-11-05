@@ -31,7 +31,7 @@ Hier findest du eine Übersicht aller Entwicklungsstufen des BookMonkey-Projekts
 | **15-rxjs** | [Demo](https://bm6.angular-buch.com/15-rxjs/)<br> [Code auf GitHub](https://github.com/angular-buch/book-monkey6/tree/main/15-rxjs)<br>[Diff](https://bm6.angular-buch.com/diffs/15-rxjs.html) | Kapitel -1 (Seite -1)<br>_Reaktive Programmierung mit RxJS_  |
 
 
-[→ Zur Liste mit allen Differenzansichten](https://bm6.angular-buch.com/diffs/)
+[](https://bm6.angular-buch.com/diffs/)
 
 
 ## BookMonkey 6 API
