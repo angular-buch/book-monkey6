@@ -1,25 +1,15 @@
 <h1>Welcome to the BookMonkey!</h1>
 
-<hr />
-
-<input type="search" [field]="searchField" placeholder="Search" />
-
-@if (isLoading()) {
-<span aria-busy="true">Searching ...</span>
-}
-
-@if (results().length) {
-<section>
-  <h2>Search results</h2>
+<section [attr.aria-busy]="isLoading()">
+  <label for="search">Search for Books</label>
+  <input type="search" id="search" [field]="searchField" />
   <ul>
     @for (b of results(); track b.isbn) {
     <li>
       <a [routerLink]="['/books', 'details', b.isbn]">
-        {{ b.title }} ({{ b.isbn }})
+        {{ b.title }} / {{ b.isbn }}
       </a>
     </li>
     }
   </ul>
 </section>
-}
-

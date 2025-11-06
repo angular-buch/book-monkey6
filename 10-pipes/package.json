@@ -22,7 +22,7 @@
     ]
   },
   "private": true,
-  "packageManager": "npm@11.5.2",
+  "packageManager": "npm@11.6.2",
   "dependencies": {
     "@angular-buch/styles": "github:angular-buch/styles",
     "@angular/common": "^21.0.0-next.0",
@@ -35,14 +35,14 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.0.0-rc.0",
-    "@angular/cli": "^21.0.0-rc.0",
+    "@angular/build": "^21.0.0-rc.1",
+    "@angular/cli": "^21.0.0-rc.1",
     "@angular/compiler-cli": "^21.0.0-next.0",
-    "angular-eslint": "20.5.0",
+    "angular-eslint": "20.5.1",
     "eslint": "^9.38.0",
     "jsdom": "^27.0.0",
     "typescript": "~5.9.2",
-    "typescript-eslint": "8.46.1",
+    "typescript-eslint": "8.46.2",
     "vitest": "^4.0.0"
   }
 }
