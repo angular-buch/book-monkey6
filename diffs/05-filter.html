@@ -295,7 +295,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      #searchInput</span>
+            <span class="d2h-code-line-ctn">      [value]=&quot;searchTerm()&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -305,7 +305,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      (input)=&quot;this.searchTerm.set(searchInput.value)&quot;</span>
+            <span class="d2h-code-line-ctn">      (input)=&quot;this.searchTerm.set($event.target.value)&quot;</span>
         </div>
     </td>
 </tr><tr>
