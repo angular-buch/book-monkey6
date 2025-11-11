@@ -15,8 +15,8 @@
   <div>
     <input
       type="search"
-      #searchInput
-      (input)="this.searchTerm.set(searchInput.value)"
+      [value]="searchTerm()"
+      (input)="this.searchTerm.set($event.target.value)"
       placeholder="Search"
       aria-label="Search"
     />

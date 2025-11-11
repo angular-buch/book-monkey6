@@ -19,7 +19,8 @@
   <div>
     <input
       type="search"
-      [field]="searchField"
+      [value]="searchTerm()"
+      (input)="this.searchTerm.set($event.target.value)"
       placeholder="Search"
       aria-label="Search"
     />

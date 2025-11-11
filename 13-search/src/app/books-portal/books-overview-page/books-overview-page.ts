@@ -1,5 +1,4 @@
 import { Component, effect, inject, input, linkedSignal, signal } from '@angular/core';
-import { Field, form } from '@angular/forms/signals';
 import { Router } from '@angular/router';
 
 import { Book } from '../../shared/book';
@@ -8,7 +7,7 @@ import { BookStore } from '../../shared/book-store';
 
 @Component({
   selector: 'app-books-overview-page',
-  imports: [BookCard, Field],
+  imports: [BookCard],
   templateUrl: './books-overview-page.html',
   styleUrl: './books-overview-page.scss',
 })
@@ -18,7 +17,6 @@ export class BooksOverviewPage {
 
   readonly search = input<string>();
   protected searchTerm = linkedSignal(() => this.search() || '');
-  protected searchField = form(this.searchTerm);
 
   protected books = this.#bookStore.getAll(this.searchTerm);
   protected likedBooks = signal<Book[]>([]);
