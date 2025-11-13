@@ -2303,7 +2303,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export const formSchema = schema&lt;Book&gt;((fieldPath) =&gt; {</span>
+            <span class="d2h-code-line-ctn">export const formSchema = schema&lt;Book&gt;((schemaPath) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2313,7 +2313,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.title);</span>
+            <span class="d2h-code-line-ctn">  required(schemaPath.title);</span>
         </div>
     </td>
 </tr><tr>
@@ -2323,7 +2323,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.isbn);</span>
+            <span class="d2h-code-line-ctn">  required(schemaPath.isbn);</span>
         </div>
     </td>
 </tr><tr>
@@ -2333,7 +2333,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  minLength(fieldPath.isbn, 13);</span>
+            <span class="d2h-code-line-ctn">  minLength(schemaPath.isbn, 13);</span>
         </div>
     </td>
 </tr><tr>
@@ -2343,7 +2343,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  maxLength(fieldPath.isbn, 13);</span>
+            <span class="d2h-code-line-ctn">  maxLength(schemaPath.isbn, 13);</span>
         </div>
     </td>
 </tr><tr>
@@ -2353,7 +2353,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  validate(fieldPath.authors, (ctx) =&gt;</span>
+            <span class="d2h-code-line-ctn">  validate(schemaPath.authors, (ctx) =&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -2403,7 +2403,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.description);</span>
+            <span class="d2h-code-line-ctn">  required(schemaPath.description);</span>
         </div>
     </td>
 </tr><tr>
@@ -2413,7 +2413,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(fieldPath.imageUrl);</span>
+            <span class="d2h-code-line-ctn">  required(schemaPath.imageUrl);</span>
         </div>
     </td>
 </tr><tr>
