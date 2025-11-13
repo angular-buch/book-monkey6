@@ -5,18 +5,18 @@ import { Router } from '@angular/router';
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
 
-export const formSchema = schema<Book>((fieldPath) => {
-  required(fieldPath.title);
-  required(fieldPath.isbn);
-  minLength(fieldPath.isbn, 13);
-  maxLength(fieldPath.isbn, 13);
-  validate(fieldPath.authors, (ctx) =>
+export const formSchema = schema<Book>((schemaPath) => {
+  required(schemaPath.title);
+  required(schemaPath.isbn);
+  minLength(schemaPath.isbn, 13);
+  maxLength(schemaPath.isbn, 13);
+  validate(schemaPath.authors, (ctx) =>
     !ctx.value().some((a) => a)
       ? customError({ kind: 'atLeastOneAuthor' })
       : undefined
   );
-  required(fieldPath.description);
-  required(fieldPath.imageUrl);
+  required(schemaPath.description);
+  required(schemaPath.imageUrl);
 });
 
 @Component({
