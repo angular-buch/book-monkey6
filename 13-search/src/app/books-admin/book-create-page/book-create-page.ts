@@ -5,14 +5,16 @@ import { Router } from '@angular/router';
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
 
-export const formSchema = schema<Book>((schemaPath) => {
+type BookFormData = Required<Book>;
+
+export const bookFormSchema = schema<BookFormData>((schemaPath) => {
   required(schemaPath.title);
   required(schemaPath.isbn);
   minLength(schemaPath.isbn, 13);
   maxLength(schemaPath.isbn, 13);
   validate(schemaPath.authors, (ctx) =>
     !ctx.value().some((a) => a)
-      ? customError({ kind: 'atLeastOneAuthor' })
+      ? { kind: 'atLeastOneAuthor' }
       : undefined
   );
   required(schemaPath.description);
@@ -29,7 +31,7 @@ export class BookCreatePage {
   #bookStore = inject(BookStore);
   #router = inject(Router);
 
-  readonly #book = signal<Required<Book>>({
+  readonly #bookFormData = signal<BookFormData>({
     isbn: '',
     title: '',
     subtitle: '',
@@ -38,7 +40,7 @@ export class BookCreatePage {
     imageUrl: '',
     createdAt: new Date().toISOString(),
   });
-  protected readonly bookForm = form(this.#book, formSchema);
+  protected readonly bookForm = form(this.#bookFormData, bookFormSchema);
 
   addAuthorField() {
     this.bookForm.authors().value.update((authors) => [...authors, '']);

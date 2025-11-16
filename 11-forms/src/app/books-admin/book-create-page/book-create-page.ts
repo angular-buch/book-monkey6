@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
 
+type BookFormData = Required<Book>;
+
 @Component({
   selector: 'app-book-create-page',
   imports: [Field],
@@ -15,7 +17,7 @@ export class BookCreatePage {
   #bookStore = inject(BookStore);
   #router = inject(Router);
 
-  readonly #book = signal<Required<Book>>({
+  readonly #bookFormData = signal<BookFormData>({
     isbn: '',
     title: '',
     subtitle: '',
@@ -24,7 +26,7 @@ export class BookCreatePage {
     imageUrl: '',
     createdAt: new Date().toISOString(),
   });
-  protected readonly bookForm = form(this.#book);
+  protected readonly bookForm = form(this.#bookFormData);
 
   addAuthorField() {
     this.bookForm.authors().value.update((authors) => [...authors, '']);
