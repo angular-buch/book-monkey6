@@ -4,7 +4,7 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    title: 'BookMonkey',
+    title: 'BookManager',
     loadComponent: () => import('./home-page/home-page')
       .then(m => m.HomePage)
   },

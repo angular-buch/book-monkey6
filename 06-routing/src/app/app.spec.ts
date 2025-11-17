@@ -19,17 +19,17 @@ describe('App', () => {
   });
 
   /*
-  it(`should have the 'book-monkey' title`, () => {
+  it(`should have the 'book-manager' title`, () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('book-monkey');
+    expect(app.title).toEqual('book-manager');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, book-monkey');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, book-manager');
   });
   */
 });

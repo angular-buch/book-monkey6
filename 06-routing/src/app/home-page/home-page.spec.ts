@@ -16,6 +16,6 @@ describe('HomePage Routing', () => {
     const component = await harness.navigateByUrl('/home', HomePage);
 
     expect(component).toBeTruthy();
-    expect(document.title).toBe('BookMonkey');
+    expect(document.title).toBe('BookManager');
   });
 });

@@ -9,7 +9,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "book-monkey": {
+    "book-manager": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "book-monkey:build:production"
+              "buildTarget": "book-manager:build:production"
             },
             "development": {
-              "buildTarget": "book-monkey:build:development"
+              "buildTarget": "book-manager:build:development"
             }
           },
           "defaultConfiguration": "development"
