@@ -38,8 +38,8 @@ Hier findest du eine Übersicht aller Entwicklungsstufen des BookManager-Projekt
 
 Als zentrale Datenquelle dient uns die BookManager API. Auch für diese HTTP-Schnittstelle stellen wir den Quelltext bereit:
 
-- [Oberfläche](https://api6.angular-buch.com)
-- [Quelltext auf GitHub](https://github.com/angular-buch/api6)
+- [Oberfläche](https://api1.angular-buch.com)
+- [Quelltext auf GitHub](https://github.com/angular-buch/book-manager-api1)
 
 
 ## BookManager 1 Styles

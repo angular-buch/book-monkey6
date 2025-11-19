@@ -9,7 +9,7 @@ import { Book } from './book';
 })
 export class BookStore {
   #http = inject(HttpClient);
-  #apiUrl = 'https://api6.angular-buch.com';
+  #apiUrl = 'https://api1.angular-buch.com';
 
   getAll(): HttpResourceRef<Book[]> {
     return httpResource<Book[]>(
